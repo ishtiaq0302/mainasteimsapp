@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="color">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/assets/color.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

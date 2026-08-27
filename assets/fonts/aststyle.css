@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'ast-icon';
+  src:  url('ast-icon.eot?z5orx1');
+  src:  url('ast-icon.eot?z5orx1#iefix') format('embedded-opentype'),
+    url('ast-icon.ttf?z5orx1') format('truetype'),
+    url('ast-icon.woff?z5orx1') format('woff'),
+    url('ast-icon.svg?z5orx1#ast-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ast-"], [class*=" ast-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ast-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ast-b1:before {
+  content: "\e900";
+}
+.ast-t3:before {
+  content: "\e901";
+}
+.ast-p2:before {
+  content: "\e902";
+}
+.ast-graduatesilhouettesbw_p:before {
+  content: "\e903";
+}
+.ast-grouppeople:before {
+  content: "\e904";
+}

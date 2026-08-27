@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Production-database.php">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mvc/config/production/Production-database.php.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

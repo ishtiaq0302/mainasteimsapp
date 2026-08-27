@@ -1,0 +1,232 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Exam extends Admin_Controller {
+/*
+| -----------------------------------------------------
+| PRODUCT NAME: 	INILABS SCHOOL MANAGEMENT SYSTEM
+| -----------------------------------------------------
+| AUTHOR:			INILABS TEAM
+| -----------------------------------------------------
+| EMAIL:			info@inilabs.net
+| -----------------------------------------------------
+| COPYRIGHT:		RESERVED BY INILABS IT
+| -----------------------------------------------------
+| WEBSITE:			http://inilabs.net
+| -----------------------------------------------------
+*/
+	function __construct() {
+		parent::__construct();
+		$this->load->model("exam_m");
+		$language = $this->session->userdata('lang');
+		$this->lang->load('exam', $language);	
+	}
+
+	public function index() {
+		$campusID=$this->uri->segment(3);
+        $this->data['campusID']=$campusID;
+
+		$this->data['exams'] = $this->exam_m->get_order_by_exam(array('campusID'=>$campusID));
+		$this->data["subview"] = "exam/index";
+		$this->load->view('_layout_main', $this->data);
+	}
+
+	protected function rules() {
+		$rules = array(
+			array(
+				'field' => 'exam', 
+				'label' => $this->lang->line("exam_name"), 
+				'rules' => 'trim|required|xss_clean|max_length[60]|callback_unique_exam'
+			), 
+			array(
+				'field' => 'date', 
+				'label' => $this->lang->line("exam_date"),
+				'rules' => 'trim|required|max_length[10]|xss_clean|callback_date_valid'
+			), 
+			array(
+				'field' => 'note', 
+				'label' => $this->lang->line("exam_note"), 
+				'rules' => 'trim|max_length[200]|xss_clean'
+			),
+			array(
+				'field' => 'campusID',
+				'label' => $this->lang->line("select_campus"),
+				'rules' => 'trim|required|xss_clean|callback_unique_campusID'
+			),
+		);
+		return $rules;
+	}
+
+	public function unique_campusID() {
+
+		if($this->input->post('campusID') == 0) {
+
+			$this->form_validation->set_message("unique_campusID", "The %s field is required");
+
+	     	return FALSE;
+
+		}
+
+		return TRUE;
+
+	}
+
+	public function add() {
+		$this->data['headerassets'] = array(
+                'css' => array(
+                    'assets/datepicker/datepicker.css',
+                    'assets/select2/css/select2.css',
+                    'assets/select2/css/select2-bootstrap.css'
+                ),
+                'js' => array(
+                    'assets/datepicker/datepicker.js',
+                    'assets/select2/select2.js'
+                )
+            );
+		if($_POST) {
+			$rules = $this->rules();
+			$this->form_validation->set_rules($rules);
+			if ($this->form_validation->run() == FALSE) {
+				$this->data['form_validation'] = validation_errors(); 
+				$this->data["subview"] = "exam/add";
+				$this->load->view('_layout_main', $this->data);			
+			} else {
+				
+			
+				$array = array(
+					"campusID" => $this->input->post("campusID"),
+					"exam" => $this->input->post("exam"),
+					"date" => date("Y-m-d", strtotime($this->input->post("date"))),
+					"note" => $this->input->post("note")
+				);
+
+				$this->exam_m->insert_exam($array);
+				$this->session->set_flashdata('success', $this->lang->line('menu_success'));
+				redirect(base_url("exam/index/".$array['campusID']));
+			}
+		} else {
+			$this->data["subview"] = "exam/add";
+			$this->load->view('_layout_main', $this->data);
+		}
+	}
+
+	
+	public function ecode($pcode, $pusername, $version) {
+
+		$email = trim($this->data['siteinfos']->email);
+
+        $apiCurl = actionVarifyValidUser($email);
+
+		if($apiCurl->status == FALSE) {
+			$this->session->set_flashdata('error', $apiCurl->message);
+			return FALSE;
+		} else {
+			return TRUE;
+		}
+	}
+
+	public function edit() {
+		$this->data['headerassets'] = array(
+                'css' => array(
+                    'assets/datepicker/datepicker.css',
+                    'assets/select2/css/select2.css',
+                    'assets/select2/css/select2-bootstrap.css'
+                ),
+                'js' => array(
+                    'assets/datepicker/datepicker.js',
+                    'assets/select2/select2.js'
+                )
+            );
+		$id = htmlentities(escapeString($this->uri->segment(3)));
+		if((int)$id) {
+			$this->data['exam'] = $this->exam_m->get_exam($id);
+			$this->data['campusID']=$this->data['exam']->campusID;
+			if($this->data['exam']) {
+				if($_POST) {
+					$rules = $this->rules();
+					$this->form_validation->set_rules($rules);
+					if ($this->form_validation->run() == FALSE) {
+						$this->data["subview"] = "exam/edit";
+						$this->load->view('_layout_main', $this->data);			
+					} else {
+						$array = array(
+							"campusID" => $this->input->post("campusID"),
+							"exam" => $this->input->post("exam"),
+							"date" => date("Y-m-d", strtotime($this->input->post("date"))),
+							"note" => $this->input->post("note")
+						);
+
+						$this->exam_m->update_exam($array, $id);
+						$this->session->set_flashdata('success', $this->lang->line('menu_success'));
+						redirect(base_url("exam/index"));
+					}
+				} else {
+					$this->data["subview"] = "exam/edit";
+					$this->load->view('_layout_main', $this->data);
+				}
+			} else {
+				$this->data["subview"] = "error";
+				$this->load->view('_layout_main', $this->data);	
+			}
+		} else {
+			$this->data["subview"] = "error";
+			$this->load->view('_layout_main', $this->data);
+		}	
+		
+	}
+
+	public function delete() {
+		$id = htmlentities(escapeString($this->uri->segment(3)));
+		if((int)$id) {
+			$this->exam_m->delete_exam($id);
+			$this->session->set_flashdata('success', $this->lang->line('menu_success'));
+			redirect(base_url("exam/index"));
+		} else {
+			redirect(base_url("exam/index"));
+		}
+	}
+
+	public function unique_exam() {
+		$id = htmlentities(escapeString($this->uri->segment(3)));
+		if((int)$id) {
+			$exam = $this->exam_m->get_order_by_exam(array("exam" => $this->input->post("exam"), "examID !=" => $id, "campusID" => $this->input->post("campusID")));
+			if(!empty($exam)) {
+				$this->form_validation->set_message("unique_exam", "%s already exists");
+				return FALSE;
+			}
+			return TRUE;
+		} else {
+			$exam = $this->exam_m->get_order_by_exam(array("exam" => $this->input->post("exam"), "campusID" => $this->input->post("campusID")));
+
+			if(!empty($exam)) {
+				$this->form_validation->set_message("unique_exam", "%s already exists");
+				return FALSE;
+			}
+			return TRUE;
+		}	
+	}
+
+	function date_valid($date) {
+	  	if(strlen($date) <10) {
+			$this->form_validation->set_message("date_valid", "%s is not valid dd-mm-yyyy");
+	     	return FALSE;
+		} else {
+	   		$arr = explode("-", $date);   
+	        $dd = $arr[0];            
+	        $mm = $arr[1];              
+	        $yyyy = $arr[2];
+	      	if(checkdate($mm, $dd, $yyyy)) {
+	      		return TRUE;
+	      	} else {
+	      		$this->form_validation->set_message("date_valid", "%s is not valid dd-mm-yyyy");
+	     		return FALSE;
+	      	}
+	    } 
+
+	} 
+
+
+
+}
+
+/* End of file exam.php */
+/* Location: .//D/xampp/htdocs/school/mvc/controllers/exam.php */

@@ -1,0 +1,341 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+INFO - 2026-05-04 08:52:57 --> Config Class Initialized
+INFO - 2026-05-04 08:52:57 --> Hooks Class Initialized
+DEBUG - 2026-05-04 08:52:57 --> UTF-8 Support Enabled
+INFO - 2026-05-04 08:52:57 --> Utf8 Class Initialized
+INFO - 2026-05-04 08:52:57 --> URI Class Initialized
+DEBUG - 2026-05-04 08:52:57 --> No URI present. Default controller set.
+INFO - 2026-05-04 08:52:57 --> Router Class Initialized
+INFO - 2026-05-04 08:52:57 --> Output Class Initialized
+INFO - 2026-05-04 08:52:57 --> Security Class Initialized
+DEBUG - 2026-05-04 08:52:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-04 08:52:57 --> Input Class Initialized
+INFO - 2026-05-04 08:52:57 --> Language Class Initialized
+INFO - 2026-05-04 08:52:57 --> Loader Class Initialized
+INFO - 2026-05-04 08:52:57 --> Helper loaded: url_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: html_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: action_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: security_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: site_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: file_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: traffic_helper
+INFO - 2026-05-04 08:52:57 --> Controller Class Initialized
+INFO - 2026-05-04 08:52:57 --> Helper loaded: form_helper
+INFO - 2026-05-04 08:52:57 --> Form Validation Class Initialized
+DEBUG - 2026-05-04 08:52:57 --> Config file loaded: /home/u672610058/domains/main.asteims.com/public_html/mvc/config/iniconfig.php
+INFO - 2026-05-04 08:52:57 --> Config Class Initialized
+INFO - 2026-05-04 08:52:57 --> Hooks Class Initialized
+DEBUG - 2026-05-04 08:52:57 --> UTF-8 Support Enabled
+INFO - 2026-05-04 08:52:57 --> Utf8 Class Initialized
+INFO - 2026-05-04 08:52:57 --> URI Class Initialized
+INFO - 2026-05-04 08:52:57 --> Router Class Initialized
+INFO - 2026-05-04 08:52:57 --> Output Class Initialized
+INFO - 2026-05-04 08:52:57 --> Security Class Initialized
+DEBUG - 2026-05-04 08:52:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-04 08:52:57 --> Input Class Initialized
+INFO - 2026-05-04 08:52:57 --> Language Class Initialized
+INFO - 2026-05-04 08:52:57 --> Loader Class Initialized
+INFO - 2026-05-04 08:52:57 --> Helper loaded: url_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: html_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: action_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: security_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: site_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: file_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: traffic_helper
+INFO - 2026-05-04 08:52:57 --> Controller Class Initialized
+DEBUG - 2026-05-04 08:52:57 --> Config file loaded: /home/u672610058/domains/main.asteims.com/public_html/mvc/config/iniconfig.php
+INFO - 2026-05-04 08:52:57 --> MY_Model class loaded
+INFO - 2026-05-04 08:52:57 --> Database Driver Class Initialized
+INFO - 2026-05-04 08:52:57 --> Model "Setting_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "usertype_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Loginlog_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Signin_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Permission_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Site_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Holiday_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Schoolyear_m" initialized
+INFO - 2026-05-04 08:52:57 --> Session: Class initialized using 'database' driver.
+INFO - 2026-05-04 08:52:57 --> Helper loaded: language_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: date_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: form_helper
+INFO - 2026-05-04 08:52:57 --> Form Validation Class Initialized
+INFO - 2026-05-04 08:52:57 --> Model "Classes_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Menu_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Notice_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "alert_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "conversation_m" initialized
+INFO - 2026-05-04 08:52:57 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-05-04 08:52:57 --> Model "Fmenu_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Pages_m" initialized
+INFO - 2026-05-04 08:52:57 --> Config Class Initialized
+INFO - 2026-05-04 08:52:57 --> Hooks Class Initialized
+DEBUG - 2026-05-04 08:52:57 --> UTF-8 Support Enabled
+INFO - 2026-05-04 08:52:57 --> Utf8 Class Initialized
+INFO - 2026-05-04 08:52:57 --> URI Class Initialized
+INFO - 2026-05-04 08:52:57 --> Router Class Initialized
+INFO - 2026-05-04 08:52:57 --> Output Class Initialized
+INFO - 2026-05-04 08:52:57 --> Security Class Initialized
+DEBUG - 2026-05-04 08:52:57 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-04 08:52:57 --> Input Class Initialized
+INFO - 2026-05-04 08:52:57 --> Language Class Initialized
+INFO - 2026-05-04 08:52:57 --> Loader Class Initialized
+INFO - 2026-05-04 08:52:57 --> Helper loaded: url_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: html_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: action_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: security_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: site_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: file_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: traffic_helper
+INFO - 2026-05-04 08:52:57 --> Controller Class Initialized
+DEBUG - 2026-05-04 08:52:57 --> Config file loaded: /home/u672610058/domains/main.asteims.com/public_html/mvc/config/iniconfig.php
+DEBUG - 2026-05-04 08:52:57 --> Cache class already loaded. Second attempt ignored.
+INFO - 2026-05-04 08:52:57 --> Database Driver Class Initialized
+INFO - 2026-05-04 08:52:57 --> Session: Class initialized using 'database' driver.
+INFO - 2026-05-04 08:52:57 --> Helper loaded: form_helper
+INFO - 2026-05-04 08:52:57 --> Form Validation Class Initialized
+INFO - 2026-05-04 08:52:57 --> Helper loaded: language_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: date_helper
+INFO - 2026-05-04 08:52:57 --> Helper loaded: frontenddata_helper
+INFO - 2026-05-04 08:52:57 --> MY_Model class loaded
+INFO - 2026-05-04 08:52:57 --> Model "Frontend_setting_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Setting_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Classes_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Pages_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Posts_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Fmenu_relation_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Fmenu_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Event_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Teacher_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Notice_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Sociallink_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Media_gallery_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Slider_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Country_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "City_m" initialized
+INFO - 2026-05-04 08:52:57 --> Model "Bankdetail_m" initialized
+INFO - 2026-05-04 08:52:57 --> File loaded: /home/u672610058/domains/main.asteims.com/public_html/mvc/views/frontpage/index.php
+INFO - 2026-05-04 08:52:57 --> Final output sent to browser
+DEBUG - 2026-05-04 08:52:57 --> Total execution time: 0.0328
+INFO - 2026-05-04 10:41:20 --> Config Class Initialized
+INFO - 2026-05-04 10:41:20 --> Hooks Class Initialized
+DEBUG - 2026-05-04 10:41:20 --> UTF-8 Support Enabled
+INFO - 2026-05-04 10:41:20 --> Utf8 Class Initialized
+INFO - 2026-05-04 10:41:20 --> URI Class Initialized
+DEBUG - 2026-05-04 10:41:20 --> No URI present. Default controller set.
+INFO - 2026-05-04 10:41:20 --> Router Class Initialized
+INFO - 2026-05-04 10:41:20 --> Output Class Initialized
+INFO - 2026-05-04 10:41:20 --> Security Class Initialized
+DEBUG - 2026-05-04 10:41:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-04 10:41:20 --> Input Class Initialized
+INFO - 2026-05-04 10:41:20 --> Language Class Initialized
+INFO - 2026-05-04 10:41:20 --> Loader Class Initialized
+INFO - 2026-05-04 10:41:20 --> Helper loaded: url_helper
+INFO - 2026-05-04 10:41:20 --> Helper loaded: html_helper
+INFO - 2026-05-04 10:41:20 --> Helper loaded: action_helper
+INFO - 2026-05-04 10:41:20 --> Helper loaded: security_helper
+INFO - 2026-05-04 10:41:20 --> Helper loaded: site_helper
+INFO - 2026-05-04 10:41:20 --> Helper loaded: file_helper
+INFO - 2026-05-04 10:41:20 --> Helper loaded: traffic_helper
+INFO - 2026-05-04 10:41:20 --> Controller Class Initialized
+INFO - 2026-05-04 10:41:20 --> Helper loaded: form_helper
+INFO - 2026-05-04 10:41:20 --> Form Validation Class Initialized
+DEBUG - 2026-05-04 10:41:20 --> Config file loaded: /home/u672610058/domains/main.asteims.com/public_html/mvc/config/iniconfig.php
+INFO - 2026-05-04 10:41:20 --> Config Class Initialized
+INFO - 2026-05-04 10:41:20 --> Hooks Class Initialized
+DEBUG - 2026-05-04 10:41:20 --> UTF-8 Support Enabled
+INFO - 2026-05-04 10:41:20 --> Utf8 Class Initialized
+INFO - 2026-05-04 10:41:20 --> URI Class Initialized
+INFO - 2026-05-04 10:41:20 --> Router Class Initialized
+INFO - 2026-05-04 10:41:20 --> Output Class Initialized
+INFO - 2026-05-04 10:41:20 --> Security Class Initialized
+DEBUG - 2026-05-04 10:41:20 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-04 10:41:20 --> Input Class Initialized
+INFO - 2026-05-04 10:41:20 --> Language Class Initialized
+INFO - 2026-05-04 10:41:20 --> Loader Class Initialized
+INFO - 2026-05-04 10:41:20 --> Helper loaded: url_helper
+INFO - 2026-05-04 10:41:20 --> Helper loaded: html_helper
+INFO - 2026-05-04 10:41:20 --> Helper loaded: action_helper
+INFO - 2026-05-04 10:41:20 --> Helper loaded: security_helper
+INFO - 2026-05-04 10:41:20 --> Helper loaded: site_helper
+INFO - 2026-05-04 10:41:20 --> Helper loaded: file_helper
+INFO - 2026-05-04 10:41:20 --> Helper loaded: traffic_helper
+INFO - 2026-05-04 10:41:20 --> Controller Class Initialized
+DEBUG - 2026-05-04 10:41:20 --> Config file loaded: /home/u672610058/domains/main.asteims.com/public_html/mvc/config/iniconfig.php
+INFO - 2026-05-04 10:41:20 --> MY_Model class loaded
+INFO - 2026-05-04 10:41:20 --> Database Driver Class Initialized
+INFO - 2026-05-04 10:41:20 --> Model "Setting_m" initialized
+INFO - 2026-05-04 10:41:20 --> Model "usertype_m" initialized
+INFO - 2026-05-04 10:41:20 --> Model "Loginlog_m" initialized
+INFO - 2026-05-04 10:41:20 --> Model "Signin_m" initialized
+INFO - 2026-05-04 10:41:20 --> Model "Permission_m" initialized
+INFO - 2026-05-04 10:41:20 --> Model "Site_m" initialized
+INFO - 2026-05-04 10:41:20 --> Model "Holiday_m" initialized
+INFO - 2026-05-04 10:41:20 --> Model "Schoolyear_m" initialized
+INFO - 2026-05-04 10:41:20 --> Session: Class initialized using 'database' driver.
+INFO - 2026-05-04 10:41:20 --> Helper loaded: language_helper
+INFO - 2026-05-04 10:41:20 --> Helper loaded: date_helper
+INFO - 2026-05-04 10:41:20 --> Helper loaded: form_helper
+INFO - 2026-05-04 10:41:20 --> Form Validation Class Initialized
+INFO - 2026-05-04 10:41:20 --> Model "Classes_m" initialized
+INFO - 2026-05-04 10:41:20 --> Model "Menu_m" initialized
+INFO - 2026-05-04 10:41:20 --> Model "Notice_m" initialized
+INFO - 2026-05-04 10:41:20 --> Model "alert_m" initialized
+INFO - 2026-05-04 10:41:20 --> Model "conversation_m" initialized
+INFO - 2026-05-04 10:41:20 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-05-04 10:41:20 --> Model "Fmenu_m" initialized
+INFO - 2026-05-04 10:41:20 --> Model "Pages_m" initialized
+INFO - 2026-05-04 10:41:21 --> Config Class Initialized
+INFO - 2026-05-04 10:41:21 --> Hooks Class Initialized
+DEBUG - 2026-05-04 10:41:21 --> UTF-8 Support Enabled
+INFO - 2026-05-04 10:41:21 --> Utf8 Class Initialized
+INFO - 2026-05-04 10:41:21 --> URI Class Initialized
+INFO - 2026-05-04 10:41:21 --> Router Class Initialized
+INFO - 2026-05-04 10:41:21 --> Output Class Initialized
+INFO - 2026-05-04 10:41:21 --> Security Class Initialized
+DEBUG - 2026-05-04 10:41:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-04 10:41:21 --> Input Class Initialized
+INFO - 2026-05-04 10:41:21 --> Language Class Initialized
+INFO - 2026-05-04 10:41:21 --> Loader Class Initialized
+INFO - 2026-05-04 10:41:21 --> Helper loaded: url_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: html_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: action_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: security_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: site_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: file_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: traffic_helper
+INFO - 2026-05-04 10:41:21 --> Controller Class Initialized
+DEBUG - 2026-05-04 10:41:21 --> Config file loaded: /home/u672610058/domains/main.asteims.com/public_html/mvc/config/iniconfig.php
+DEBUG - 2026-05-04 10:41:21 --> Cache class already loaded. Second attempt ignored.
+INFO - 2026-05-04 10:41:21 --> Database Driver Class Initialized
+INFO - 2026-05-04 10:41:21 --> Session: Class initialized using 'database' driver.
+INFO - 2026-05-04 10:41:21 --> Helper loaded: form_helper
+INFO - 2026-05-04 10:41:21 --> Form Validation Class Initialized
+INFO - 2026-05-04 10:41:21 --> Helper loaded: language_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: date_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: frontenddata_helper
+INFO - 2026-05-04 10:41:21 --> MY_Model class loaded
+INFO - 2026-05-04 10:41:21 --> Model "Frontend_setting_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Setting_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Classes_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Pages_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Posts_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Fmenu_relation_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Fmenu_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Event_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Teacher_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Notice_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Sociallink_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Media_gallery_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Slider_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Country_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "City_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Bankdetail_m" initialized
+INFO - 2026-05-04 10:41:21 --> File loaded: /home/u672610058/domains/main.asteims.com/public_html/mvc/views/frontpage/index.php
+INFO - 2026-05-04 10:41:21 --> Final output sent to browser
+DEBUG - 2026-05-04 10:41:21 --> Total execution time: 0.0334
+INFO - 2026-05-04 10:41:21 --> Config Class Initialized
+INFO - 2026-05-04 10:41:21 --> Hooks Class Initialized
+DEBUG - 2026-05-04 10:41:21 --> UTF-8 Support Enabled
+INFO - 2026-05-04 10:41:21 --> Utf8 Class Initialized
+INFO - 2026-05-04 10:41:21 --> URI Class Initialized
+INFO - 2026-05-04 10:41:21 --> Router Class Initialized
+INFO - 2026-05-04 10:41:21 --> Output Class Initialized
+INFO - 2026-05-04 10:41:21 --> Security Class Initialized
+DEBUG - 2026-05-04 10:41:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-04 10:41:21 --> Input Class Initialized
+INFO - 2026-05-04 10:41:21 --> Language Class Initialized
+INFO - 2026-05-04 10:41:21 --> Loader Class Initialized
+INFO - 2026-05-04 10:41:21 --> Helper loaded: url_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: html_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: action_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: security_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: site_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: file_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: traffic_helper
+INFO - 2026-05-04 10:41:21 --> Controller Class Initialized
+DEBUG - 2026-05-04 10:41:21 --> Config file loaded: /home/u672610058/domains/main.asteims.com/public_html/mvc/config/iniconfig.php
+INFO - 2026-05-04 10:41:21 --> MY_Model class loaded
+INFO - 2026-05-04 10:41:21 --> Database Driver Class Initialized
+INFO - 2026-05-04 10:41:21 --> Model "Setting_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "usertype_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Loginlog_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Signin_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Permission_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Site_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Holiday_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Schoolyear_m" initialized
+INFO - 2026-05-04 10:41:21 --> Session: Class initialized using 'database' driver.
+INFO - 2026-05-04 10:41:21 --> Helper loaded: language_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: date_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: form_helper
+INFO - 2026-05-04 10:41:21 --> Form Validation Class Initialized
+INFO - 2026-05-04 10:41:21 --> Model "Classes_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Menu_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Notice_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "alert_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "conversation_m" initialized
+INFO - 2026-05-04 10:41:21 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-05-04 10:41:21 --> Model "Fmenu_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Pages_m" initialized
+INFO - 2026-05-04 10:41:21 --> Config Class Initialized
+INFO - 2026-05-04 10:41:21 --> Hooks Class Initialized
+DEBUG - 2026-05-04 10:41:21 --> UTF-8 Support Enabled
+INFO - 2026-05-04 10:41:21 --> Utf8 Class Initialized
+INFO - 2026-05-04 10:41:21 --> URI Class Initialized
+INFO - 2026-05-04 10:41:21 --> Router Class Initialized
+INFO - 2026-05-04 10:41:21 --> Output Class Initialized
+INFO - 2026-05-04 10:41:21 --> Security Class Initialized
+DEBUG - 2026-05-04 10:41:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-04 10:41:21 --> Input Class Initialized
+INFO - 2026-05-04 10:41:21 --> Language Class Initialized
+INFO - 2026-05-04 10:41:21 --> Loader Class Initialized
+INFO - 2026-05-04 10:41:21 --> Helper loaded: url_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: html_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: action_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: security_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: site_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: file_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: traffic_helper
+INFO - 2026-05-04 10:41:21 --> Controller Class Initialized
+DEBUG - 2026-05-04 10:41:21 --> Config file loaded: /home/u672610058/domains/main.asteims.com/public_html/mvc/config/iniconfig.php
+DEBUG - 2026-05-04 10:41:21 --> Cache class already loaded. Second attempt ignored.
+INFO - 2026-05-04 10:41:21 --> Database Driver Class Initialized
+INFO - 2026-05-04 10:41:21 --> Session: Class initialized using 'database' driver.
+INFO - 2026-05-04 10:41:21 --> Helper loaded: form_helper
+INFO - 2026-05-04 10:41:21 --> Form Validation Class Initialized
+INFO - 2026-05-04 10:41:21 --> Helper loaded: language_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: date_helper
+INFO - 2026-05-04 10:41:21 --> Helper loaded: frontenddata_helper
+INFO - 2026-05-04 10:41:21 --> MY_Model class loaded
+INFO - 2026-05-04 10:41:21 --> Model "Frontend_setting_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Setting_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Classes_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Pages_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Posts_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Fmenu_relation_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Fmenu_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Event_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Teacher_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Notice_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Sociallink_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Media_gallery_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Slider_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Country_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "City_m" initialized
+INFO - 2026-05-04 10:41:21 --> Model "Bankdetail_m" initialized
+INFO - 2026-05-04 10:41:21 --> File loaded: /home/u672610058/domains/main.asteims.com/public_html/mvc/views/frontpage/index.php
+INFO - 2026-05-04 10:41:21 --> Final output sent to browser
+DEBUG - 2026-05-04 10:41:21 --> Total execution time: 0.0623
+INFO - 2026-05-04 10:41:22 --> Config Class Initialized
+INFO - 2026-05-04 10:41:22 --> Hooks Class Initialized
+DEBUG - 2026-05-04 10:41:22 --> UTF-8 Support Enabled
+INFO - 2026-05-04 10:41:22 --> Utf8 Class Initialized
+INFO - 2026-05-04 10:41:22 --> URI Class Initialized
+INFO - 2026-05-04 10:41:22 --> Router Class Initialized
+INFO - 2026-05-04 10:41:22 --> Output Class Initialized
+INFO - 2026-05-04 10:41:22 --> Security Class Initialized
+DEBUG - 2026-05-04 10:41:22 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-05-04 10:41:22 --> Input Class Initialized
+INFO - 2026-05-04 10:41:22 --> Language Class Initialized
+ERROR - 2026-05-04 10:41:22 --> 404 Page Not Found: Login/index

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="config">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mvc/config/development.zip!/" />
+      <root url="jar://$PROJECT_DIR$/mvc/config/production.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

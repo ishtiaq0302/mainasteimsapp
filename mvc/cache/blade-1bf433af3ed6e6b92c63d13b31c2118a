@@ -1,0 +1,15 @@
+a:3:{s:4:"time";i:1701340959;s:3:"ttl";i:3600;s:4:"data";s:382:"
+<footer>
+  
+    <div class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="copyright text-center">
+                        <?php echo  frontendData::get_backend('footer') ; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>";}

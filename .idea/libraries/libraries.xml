@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="libraries">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mvc/libraries/mpdf.zip!/" />
+      <root url="jar://$PROJECT_DIR$/mvc/libraries/PhpSpreadsheet1.2.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/mvc/libraries/Omnipay.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

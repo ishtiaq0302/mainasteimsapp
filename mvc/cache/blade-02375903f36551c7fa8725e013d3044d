@@ -1,0 +1,35 @@
+a:3:{s:4:"time";i:1701340959;s:3:"ttl";i:3600;s:4:"data";s:1204:"
+
+
+<?php $this->_section_start('content'); ?>
+
+    <section id="about" class="" style="padding-top:0px;padding-bottom:20px;">
+    	<div class="container">
+          
+
+    		<div class="row">
+        		<?php if(!count($featured_image)): ?>
+        			<div class="col-md-12">
+                        <div class="about-content">
+                            <p> <?php echo  htmlspecialchars_decode($page->content) ; ?> </p>
+                        </div>
+        			</div>
+        		<?php else: ?>
+                    <div class="col-md-6 col-md-push-6">
+                        <div class="content-img">
+                            <img src="<?php echo  imageLinkWithDefatulImage($featured_image->file_name, 'holiday.png', 'uploads/gallery/') ; ?>" />
+                        </div>
+                    </div>
+        			<div class="col-md-6 col-md-pull-6">
+                        <div class="about-content">
+                            <p> <?php echo  htmlspecialchars_decode($page->content) ; ?> </p>
+                        </div>
+        			</div>
+        		<?php endif; ?>
+    		</div>
+    	</div>
+    </section>
+<?php $this->_section_end(); ?>
+
+<?php echo $this->_include('views/layouts/master'); ?>
+";}

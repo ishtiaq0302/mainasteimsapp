@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="flexslider">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/assets/img/slider/flexslider.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

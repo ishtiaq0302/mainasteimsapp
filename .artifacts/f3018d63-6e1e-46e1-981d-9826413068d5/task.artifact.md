@@ -1,0 +1,10 @@
+- [x] Create Backend API `api/student_status.php`
+- [x] Update default IP to `localhost` in `my_app/lib/login_page.dart`
+- [x] Implement enhanced `StudentListPage` in Flutter
+    - [x] Add Search functionality
+    - [x] Add Export options (PDF, Excel, CSV)
+    - [x] Implement responsive table with full width
+    - [x] Add Photo support
+    - [x] Replace actions with three-dots menu
+    - [x] Add real-time Status Toggle
+- [ ] Verify functionality (Manual Test)

@@ -1,0 +1,26 @@
+<div class="row">
+            <div class="span6" >
+          <div class="well box aligncenter3" style="background-color: #1C4185;" >
+          
+           <img src="<?php echo base_url('assets/img/slider/flexslider/home.png');?>" alt="" >
+            
+          </div>
+                </div>
+                <div class="span6" >
+          <div class="well box aligncenter3" style="background-color: #1C4185;" >
+          
+         
+             <img src="<?php echo base_url('assets/img/slider/flexslider/h7.jpg');?>" alt="">
+          </div>
+                </div>
+            <div id="sequence" style="">
+        
+            </div>
+             
+          
+        </div>
+------------------------------
+.aligncenter3{
+	height: 315px;
+	border-radius: 25px;
+}

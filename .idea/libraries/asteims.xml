@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="asteims">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/asteims.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

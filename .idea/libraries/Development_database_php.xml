@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Development-database.php">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mvc/config/development/Development-database.php.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

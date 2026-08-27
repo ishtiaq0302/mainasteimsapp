@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="add.php">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mvc/views/purchase/add.php.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

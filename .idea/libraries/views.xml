@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="views">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mvc/views/bank.zip!/" />
+      <root url="jar://$PROJECT_DIR$/mvc/views/downloadsetting.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

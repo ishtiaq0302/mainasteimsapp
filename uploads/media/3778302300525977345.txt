@@ -1,0 +1,32 @@
+$query = "SELECT * FROM post-job";
+				$conditions = array();
+			
+				if(! empty($currencytype)) {
+				  $conditions[] = "currency='$currencytype'";
+				}
+				if(! empty($country)) {
+				  $conditions[] = "country='$country'";
+				}
+				if(! empty($city)) {
+				  $conditions[] = "city='$city'";
+				}
+				if(! empty($exp)) {
+				  $conditions[] = "exp='$exp'";
+				}
+				if(!empty($employerid)){
+					 $conditions[] = "employerid='$employerid'";
+				}
+				 if(!empty($qualification)){
+					 $conditions[] = "qualification='$qualification'";
+				}
+				 if(!empty($employerid)){
+					 $conditions[] = "gender='$gender'";
+				}
+			
+				$sql = $query;
+				if (count($conditions) > 0) {
+				  $sql .= " WHERE " . implode(' AND ', $conditions);
+				}
+			
+				$row = mysqli_query($success,$sql);
+				$result = mysqli_num_rows($row);
