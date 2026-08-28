@@ -31,17 +31,29 @@ class _ClassFormPageState extends State<ClassFormPage> {
   @override
   void initState() {
     super.initState();
-    _fetchCampuses();
-
     if (widget.classData != null) {
-      _classNameController.text = (widget.classData!['classes'] ?? '')
-          .toString();
-      _classNumericController.text =
-          (widget.classData!['classes_numeric'] ?? '').toString();
+      _classNameController.text = (widget.classData!['classes'] ?? '').toString();
+      _classNumericController.text = (widget.classData!['classes_numeric'] ?? '').toString();
       _noteController.text = (widget.classData!['note'] ?? '').toString();
       _selectedCampus = (widget.classData!['campusID'] ?? '').toString();
       _selectedTeacher = (widget.classData!['teacherID'] ?? '').toString();
     }
+    _initData();
+  }
+
+  @override
+  void dispose() {
+    _classNameController.dispose();
+    _classNumericController.dispose();
+    _noteController.dispose();
+    super.dispose();
+  }
+
+  Future<void> _initData() async {
+    setState(() => _isLoading = true);
+    await _fetchCampuses();
+    await _fetchTeachers(_selectedCampus ?? '0');
+    if (mounted) setState(() => _isLoading = false);
   }
 
   Future<void> _fetchCampuses() async {
@@ -57,9 +69,7 @@ class _ClassFormPageState extends State<ClassFormPage> {
       );
       final result = jsonDecode(response.body);
       if (result['status'] == true) {
-        setState(() {
-          _campuses = result['data']['campuses'] ?? [];
-        });
+        _campuses = result['data']['campuses'] ?? [];
       }
     } catch (e) {
       dev.log('Fetch campuses error: $e');
@@ -76,23 +86,29 @@ class _ClassFormPageState extends State<ClassFormPage> {
         Uri.parse(apiUrl),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
-          'campusID': campusID,
+          'campusID': campusID == '0' ? '' : campusID,
           'adminID': widget.userData['adminID'] ?? 1,
         }),
       );
 
       final result = jsonDecode(response.body);
       if (result['status'] == true) {
-        setState(() {
-          _teachers = result['data'] ?? [];
-          if (_selectedTeacher != null &&
-              _teachers.every(
-                (teacher) =>
-                    teacher['teacherID'].toString() != _selectedTeacher,
-              )) {
-            _selectedTeacher = null;
+        List teachersList = result['data'] ?? [];
+        _teachers = teachersList;
+        if (_selectedTeacher != null &&
+            _selectedTeacher != '0' &&
+            !_teachers.any((t) => t['teacherID'].toString() == _selectedTeacher)) {
+          // If teacher is not in current campus list, search all teachers
+          final allTeachersRes = await http.post(
+            Uri.parse(apiUrl),
+            headers: {'Content-Type': 'application/json'},
+            body: jsonEncode({'adminID': widget.userData['adminID'] ?? 1}),
+          );
+          final allResult = jsonDecode(allTeachersRes.body);
+          if (allResult['status'] == true) {
+            _teachers = allResult['data'] ?? [];
           }
-        });
+        }
       }
     } catch (e) {
       dev.log('Fetch teachers error: $e');
@@ -103,16 +119,12 @@ class _ClassFormPageState extends State<ClassFormPage> {
     if (!_formKey.currentState!.validate()) return;
 
     if (_selectedCampus == null || _selectedCampus == '0') {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(const SnackBar(content: Text('Please select a campus')));
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please select a campus')));
       return;
     }
 
     if (_selectedTeacher == null || _selectedTeacher == '0') {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(const SnackBar(content: Text('Please select a teacher')));
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please select a teacher')));
       return;
     }
 
@@ -125,14 +137,19 @@ class _ClassFormPageState extends State<ClassFormPage> {
         ? '${base}api/classes_add'
         : '${base}api/classes_update';
 
-    final body = {
+    final body = <String, dynamic>{
       'campusID': _selectedCampus,
       'classes': _classNameController.text.trim(),
       'classes_numeric': _classNumericController.text.trim(),
       'teacherID': _selectedTeacher,
       'note': _noteController.text.trim(),
+      
       'adminID': widget.userData['adminID'] ?? 1,
-      if (widget.classData != null) 'classesID': widget.classData!['classesID'],
+      'create_userID': _getCreateUserID(),
+      'create_username': widget.userData['username'] ?? widget.userData['name'] ?? 'admin',
+      'create_usertype': widget.userData['user_type'] ?? 'Admin',
+
+      if (widget.classData != null) 'classesID': widget.classData!['classesID'] ?? widget.classData!['classID'],
     };
 
     try {
@@ -142,7 +159,25 @@ class _ClassFormPageState extends State<ClassFormPage> {
         body: jsonEncode(body),
       );
 
-      final result = jsonDecode(response.body);
+      if (response.body.trim().isEmpty) {
+        if (!mounted) return;
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Server returned an empty response. Please try again.')),
+        );
+        return;
+      }
+
+      Map result;
+      try {
+        result = jsonDecode(response.body);
+      } catch (e) {
+        if (!mounted) return;
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Server returned an invalid response: ${response.body}')),
+        );
+        return;
+      }
+      
       if (!mounted) return;
 
       if (result['status'] == true) {
@@ -159,7 +194,7 @@ class _ClassFormPageState extends State<ClassFormPage> {
       dev.log('Save class error: $e');
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Connection error while saving class')),
+        SnackBar(content: Text('Error saving class: $e')),
       );
     } finally {
       if (mounted) setState(() => _isLoading = false);
@@ -192,9 +227,14 @@ class _ClassFormPageState extends State<ClassFormPage> {
                           )
                           .toList(),
                       onChanged: (value) {
-                        setState(() => _selectedCampus = value);
+                        setState(() {
+                          _selectedCampus = value;
+                          _selectedTeacher = null;
+                        });
                         if (value != null && value != '0') {
-                          _fetchTeachers(value);
+                          _fetchTeachers(value).then((_) {
+                            if (mounted) setState(() {});
+                          });
                         }
                       },
                       validator: (value) =>
@@ -208,8 +248,8 @@ class _ClassFormPageState extends State<ClassFormPage> {
                       ),
                       validator: (value) =>
                           value == null || value.trim().isEmpty
-                          ? 'Required'
-                          : null,
+                              ? 'Required'
+                              : null,
                     ),
                     const SizedBox(height: 12),
                     TextFormField(
@@ -220,12 +260,15 @@ class _ClassFormPageState extends State<ClassFormPage> {
                       ),
                       validator: (value) =>
                           value == null || value.trim().isEmpty
-                          ? 'Required'
-                          : null,
+                              ? 'Required'
+                              : null,
                     ),
                     const SizedBox(height: 12),
                     DropdownButtonFormField<String>(
-                      initialValue: _selectedTeacher,
+                      initialValue: (_selectedTeacher != null &&
+                              _teachers.any((t) => t['teacherID'].toString() == _selectedTeacher))
+                          ? _selectedTeacher
+                          : null,
                       decoration: const InputDecoration(labelText: 'Teacher'),
                       items: _teachers
                           .map(
@@ -253,5 +296,14 @@ class _ClassFormPageState extends State<ClassFormPage> {
               ),
             ),
     );
+  }
+
+  int _getCreateUserID() {
+    final d = widget.userData;
+    final keys = ['systemadminID', 'userID', 'teacherID', 'parentsID', 'studentID'];
+    for (var k in keys) {
+      if (d[k] != null) return int.tryParse(d[k].toString()) ?? 1;
+    }
+    return 1;
   }
 }

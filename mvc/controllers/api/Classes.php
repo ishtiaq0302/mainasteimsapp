@@ -15,15 +15,29 @@ class Classes extends REST_Controller
         $this->response($data, $code);
     }
 
-    private function _adminID()
+    private function _getPostData()
     {
+        $data = $this->post();
+        if (empty($data)) {
+            $raw = file_get_contents('php://input');
+            $data = json_decode($raw, true) ?: [];
+        }
+        return $data;
+    }
+
+    private function _adminID($data = null)
+    {
+        if ($data !== null && isset($data['adminID'])) {
+            return (int)$data['adminID'];
+        }
         return (int)($this->post('adminID') ?: 1);
     }
 
     public function index_post()
     {
-        $campusID = (int)($this->post('campusID') ?: 0);
-        $adminID = $this->_adminID();
+        $data = $this->_getPostData();
+        $campusID = (int)($data['campusID'] ?? 0);
+        $adminID = $this->_adminID($data);
 
         if ($campusID > 0) {
             $classes = $this->db
@@ -42,12 +56,9 @@ class Classes extends REST_Controller
 
     public function view_post()
     {
-        $id = $this->post('classesID');
-        if (empty($id)) {
-            $id = $this->post('classID');
-        }
-
-        $adminID = $this->_adminID();
+        $data = $this->_getPostData();
+        $id = $data['classesID'] ?? $data['classID'] ?? null;
+        $adminID = $this->_adminID($data);
 
         if ($id) {
             $class = $this->db
@@ -70,8 +81,8 @@ class Classes extends REST_Controller
 
     public function add_post()
     {
-        $data = $this->post();
-        $adminID = $this->_adminID();
+        $data = $this->_getPostData();
+        $adminID = $this->_adminID($data);
 
         $className = trim((string)($data['classes'] ?? ''));
         $classNumeric = trim((string)($data['classes_numeric'] ?? ''));
@@ -108,9 +119,9 @@ class Classes extends REST_Controller
             'note' => trim((string)($data['note'] ?? '')),
             'create_date' => date('Y-m-d H:i:s'),
             'modify_date' => date('Y-m-d H:i:s'),
-            'create_userID' => $this->session->userdata('loginuserID') ?: 0,
-            'create_username' => $this->session->userdata('username') ?: '',
-            'create_usertype' => $this->session->userdata('usertype') ?: '',
+            'create_userID' => $data['create_userID'] ?? $this->session->userdata('loginuserID') ?: 0,
+            'create_username' => $data['create_username'] ?? $this->session->userdata('username') ?: '',
+            'create_usertype' => $data['create_usertype'] ?? $this->session->userdata('usertype') ?: '',
         ];
 
         if ($this->db->insert('classes', $insertData)) {
@@ -123,13 +134,9 @@ class Classes extends REST_Controller
 
     public function update_post()
     {
-        $id = $this->post('classesID');
-        if (empty($id)) {
-            $id = $this->post('classID');
-        }
-
-        $data = $this->post();
-        $adminID = $this->_adminID();
+        $data = $this->_getPostData();
+        $id = $data['classesID'] ?? $data['classID'] ?? null;
+        $adminID = $this->_adminID($data);
 
         if ($id && !empty(trim((string)($data['classes'] ?? '')))) {
             $campusID = (int)($data['campusID'] ?? 0);
@@ -161,12 +168,9 @@ class Classes extends REST_Controller
 
     public function delete_post()
     {
-        $id = $this->post('classesID');
-        if (empty($id)) {
-            $id = $this->post('classID');
-        }
-
-        $adminID = $this->_adminID();
+        $data = $this->_getPostData();
+        $id = $data['classesID'] ?? $data['classID'] ?? null;
+        $adminID = $this->_adminID($data);
 
         if ($id) {
             if ($this->db
@@ -191,13 +195,10 @@ class Classes extends REST_Controller
             return;
         }
 
-        $id = $this->post('classesID');
-        if (empty($id)) {
-            $id = $this->post('classID');
-        }
-
-        $status = $this->post('status');
-        $adminID = $this->_adminID();
+        $data = $this->_getPostData();
+        $id = $data['classesID'] ?? $data['classID'] ?? null;
+        $status = $data['status'] ?? 0;
+        $adminID = $this->_adminID($data);
 
         if ($id) {
             if ($this->db

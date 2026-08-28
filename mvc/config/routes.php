@@ -64,6 +64,48 @@ $route['api/section_add']    = 'api/section/add';
 $route['api/section_update'] = 'api/section/update';
 $route['api/section_delete'] = 'api/section/delete';
 
+// Subject API Routes
+$route['api/subject']        = 'api/subject/index';
+$route['api/subject_view']   = 'api/subject/view';
+$route['api/subject_add']    = 'api/subject/add';
+$route['api/subject_update'] = 'api/subject/update';
+$route['api/subject_delete'] = 'api/subject/delete';
+
+// Campus API Routes
+$route['api/campus']        = 'api/campus/index';
+$route['api/campus_view']   = 'api/campus/view';
+$route['api/campus_add']    = 'api/campus/add';
+$route['api/campus_update'] = 'api/campus/update';
+$route['api/campus_delete'] = 'api/campus/delete';
+
+// Lecture API Routes
+$route['api/lecture']        = 'api/lecture/index';
+$route['api/lecture_view']   = 'api/lecture/view';
+$route['api/lecture_add']    = 'api/lecture/add';
+$route['api/lecture_update'] = 'api/lecture/update';
+$route['api/lecture_delete'] = 'api/lecture/delete';
+
+// Assignment API Routes
+$route['api/assignment']        = 'api/assignment/index';
+$route['api/assignment_view']   = 'api/assignment/view';
+$route['api/assignment_add']    = 'api/assignment/add';
+$route['api/assignment_update'] = 'api/assignment/update';
+$route['api/assignment_delete'] = 'api/assignment/delete';
+
+// Routine API Routes
+$route['api/routine']        = 'api/routine/index';
+$route['api/routine_view']   = 'api/routine/view';
+$route['api/routine_add']    = 'api/routine/add';
+$route['api/routine_update'] = 'api/routine/update';
+$route['api/routine_delete'] = 'api/routine/delete';
+
+// Syllabus API Routes
+$route['api/syllabus']        = 'api/syllabus/index';
+$route['api/syllabus_view']   = 'api/syllabus/view';
+$route['api/syllabus_add']    = 'api/syllabus/add';
+$route['api/syllabus_update'] = 'api/syllabus/update';
+$route['api/syllabus_delete'] = 'api/syllabus/delete';
+
 /*
 | -------------------------------------------------------------------------
 | URI ROUTING

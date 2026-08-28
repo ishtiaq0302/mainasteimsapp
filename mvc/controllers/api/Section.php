@@ -15,20 +15,27 @@ class Section extends REST_Controller
         $this->response($data, $code);
     }
 
-    private function _adminID()
+    private function _getPostData()
     {
-        return (int)($this->post('adminID') ?: 1);
+        $data = $this->post();
+        if (empty($data)) {
+            $raw = file_get_contents('php://input');
+            $data = json_decode($raw, true) ?: [];
+        }
+        return $data;
     }
 
-    // ---------------------------------------------------------------
-    // LIST  POST /api/section
-    // Required: campusID  (optionally classesID for filtered list)
-    // ---------------------------------------------------------------
+    private function _adminID($data = [])
+    {
+        return (int)($data['adminID'] ?? $this->post('adminID') ?? 1);
+    }
+
     public function index_post()
     {
-        $campusID  = (int)($this->post('campusID')  ?: 0);
-        $classesID = (int)($this->post('classesID') ?: 0);
-        $adminID   = $this->_adminID();
+        $data      = $this->_getPostData();
+        $campusID  = (int)($data['campusID']  ?? $this->post('campusID')  ?: 0);
+        $classesID = (int)($data['classesID'] ?? $this->post('classesID') ?: 0);
+        $adminID   = $this->_adminID($data);
 
         if ($campusID <= 0 && $classesID <= 0) {
             $this->_response(['status' => false, 'message' => 'Please provide campusID or classesID']);
@@ -39,7 +46,12 @@ class Section extends REST_Controller
         $this->db->from('section s');
         $this->db->join('teacher t', 't.teacherID = s.teacherID', 'left');
         $this->db->join('classes c', 'c.classesID = s.classesID', 'left');
-        $this->db->where('s.adminID', $adminID);
+        if ($adminID > 0) {
+            $this->db->group_start()
+                ->where('s.adminID', $adminID)
+                ->or_where('s.adminID', 0)
+                ->group_end();
+        }
 
         if ($campusID > 0)  $this->db->where('s.campusID',  $campusID);
         if ($classesID > 0) $this->db->where('s.classesID', $classesID);
@@ -50,14 +62,11 @@ class Section extends REST_Controller
         $this->_response(['status' => true, 'data' => $sections]);
     }
 
-    // ---------------------------------------------------------------
-    // DETAIL  POST /api/section_view
-    // Required: sectionID
-    // ---------------------------------------------------------------
     public function view_post()
     {
-        $id      = (int)($this->post('sectionID') ?: 0);
-        $adminID = $this->_adminID();
+        $data    = $this->_getPostData();
+        $id      = (int)($data['sectionID'] ?? $this->post('sectionID') ?: 0);
+        $adminID = $this->_adminID($data);
 
         if ($id <= 0) {
             $this->_response(['status' => false, 'message' => 'Invalid section ID']);
@@ -68,7 +77,12 @@ class Section extends REST_Controller
         $this->db->from('section s');
         $this->db->join('teacher t', 't.teacherID = s.teacherID', 'left');
         $this->db->join('classes c', 'c.classesID = s.classesID', 'left');
-        $this->db->where('s.adminID', $adminID);
+        if ($adminID > 0) {
+            $this->db->group_start()
+                ->where('s.adminID', $adminID)
+                ->or_where('s.adminID', 0)
+                ->group_end();
+        }
         $this->db->where('s.sectionID', $id);
         $section = $this->db->get()->row_array();
 
@@ -79,14 +93,10 @@ class Section extends REST_Controller
         }
     }
 
-    // ---------------------------------------------------------------
-    // ADD  POST /api/section_add
-    // Required: campusID, classesID, teacherID, section, category, capacity
-    // ---------------------------------------------------------------
     public function add_post()
     {
-        $data      = $this->post();
-        $adminID   = $this->_adminID();
+        $data      = $this->_getPostData();
+        $adminID   = $this->_adminID($data);
 
         $campusID  = (int)($data['campusID']  ?? 0);
         $classesID = (int)($data['classesID'] ?? 0);
@@ -100,9 +110,11 @@ class Section extends REST_Controller
             return;
         }
 
-        // Check duplicate section name within the same class
         $exists = $this->db
-            ->where('adminID',   $adminID)
+            ->group_start()
+                ->where('adminID', $adminID)
+                ->or_where('adminID', 0)
+            ->group_end()
             ->where('classesID', $classesID)
             ->where('section',   $section)
             ->get('section')
@@ -113,8 +125,13 @@ class Section extends REST_Controller
             return;
         }
 
+        $createUserID = (int)($data['create_userID'] ?? 0);
+        if ($createUserID <= 0) {
+            $createUserID = $adminID > 0 ? $adminID : 1;
+        }
+
         $insertData = [
-            'adminID'         => $adminID,
+            'adminID'         => $adminID > 0 ? $adminID : 1,
             'campusID'        => $campusID,
             'classesID'       => $classesID,
             'teacherID'       => $teacherID,
@@ -124,10 +141,13 @@ class Section extends REST_Controller
             'note'            => trim((string)($data['note'] ?? '')),
             'create_date'     => date('Y-m-d H:i:s'),
             'modify_date'     => date('Y-m-d H:i:s'),
-            'create_userID'   => 0,
-            'create_username' => '',
-            'create_usertype' => '',
         ];
+
+        if ($this->db->field_exists('create_userID', 'section')) {
+            $insertData['create_userID']   = $createUserID;
+            $insertData['create_username'] = trim((string)($data['create_username'] ?? 'admin'));
+            $insertData['create_usertype'] = trim((string)($data['create_usertype'] ?? 'Admin'));
+        }
 
         if ($this->db->insert('section', $insertData)) {
             $this->_response(['status' => true, 'message' => 'Section added successfully', 'sectionID' => $this->db->insert_id()]);
@@ -136,14 +156,10 @@ class Section extends REST_Controller
         }
     }
 
-    // ---------------------------------------------------------------
-    // UPDATE  POST /api/section_update
-    // Required: sectionID + same fields as add
-    // ---------------------------------------------------------------
     public function update_post()
     {
-        $data      = $this->post();
-        $adminID   = $this->_adminID();
+        $data      = $this->_getPostData();
+        $adminID   = $this->_adminID($data);
         $id        = (int)($data['sectionID'] ?? 0);
 
         $campusID  = (int)($data['campusID']  ?? 0);
@@ -158,9 +174,11 @@ class Section extends REST_Controller
             return;
         }
 
-        // Check duplicate section name within same class (exclude self)
         $exists = $this->db
-            ->where('adminID',      $adminID)
+            ->group_start()
+                ->where('adminID', $adminID)
+                ->or_where('adminID', 0)
+            ->group_end()
             ->where('classesID',    $classesID)
             ->where('section',      $section)
             ->where('sectionID !=', $id)
@@ -172,7 +190,13 @@ class Section extends REST_Controller
             return;
         }
 
+        $createUserID = (int)($data['create_userID'] ?? 0);
+        if ($createUserID <= 0) {
+            $createUserID = $adminID > 0 ? $adminID : 1;
+        }
+
         $updateData = [
+            'adminID'     => $adminID > 0 ? $adminID : 1,
             'campusID'    => $campusID,
             'classesID'   => $classesID,
             'teacherID'   => $teacherID,
@@ -183,37 +207,49 @@ class Section extends REST_Controller
             'modify_date' => date('Y-m-d H:i:s'),
         ];
 
-        if ($this->db->where('adminID', $adminID)->where('sectionID', $id)->update('section', $updateData)) {
+        if ($this->db->field_exists('create_userID', 'section')) {
+            $updateData['create_userID']   = $createUserID;
+            $updateData['create_username'] = trim((string)($data['create_username'] ?? 'admin'));
+            $updateData['create_usertype'] = trim((string)($data['create_usertype'] ?? 'Admin'));
+        }
+
+        if ($adminID > 0) {
+            $this->db->group_start()
+                ->where('adminID', $adminID)
+                ->or_where('adminID', 0)
+                ->group_end();
+        }
+        if ($this->db->where('sectionID', $id)->update('section', $updateData)) {
             $this->_response(['status' => true, 'message' => 'Section updated successfully']);
         } else {
             $this->_response(['status' => false, 'message' => 'Update failed']);
         }
     }
 
-    // ---------------------------------------------------------------
-    // DELETE  POST /api/section_delete
-    // Required: sectionID
-    // ---------------------------------------------------------------
     public function delete_post()
     {
-        $id      = (int)($this->post('sectionID') ?: 0);
-        $adminID = $this->_adminID();
+        $data    = $this->_getPostData();
+        $id      = (int)($data['sectionID'] ?? $this->post('sectionID') ?: 0);
+        $adminID = $this->_adminID($data);
 
         if ($id <= 0) {
             $this->_response(['status' => false, 'message' => 'Invalid section ID']);
             return;
         }
 
-        if ($this->db->where('adminID', $adminID)->where('sectionID', $id)->delete('section')) {
+        if ($adminID > 0) {
+            $this->db->group_start()
+                ->where('adminID', $adminID)
+                ->or_where('adminID', 0)
+                ->group_end();
+        }
+        if ($this->db->where('sectionID', $id)->delete('section')) {
             $this->_response(['status' => true, 'message' => 'Section deleted successfully']);
         } else {
             $this->_response(['status' => false, 'message' => 'Delete failed']);
         }
     }
 
-    // ---------------------------------------------------------------
-    // Alias routes (matching Classes.php convention)
-    // ---------------------------------------------------------------
     public function section_view_post()   { $this->view_post();   }
     public function section_add_post()    { $this->add_post();    }
     public function section_update_post() { $this->update_post(); }

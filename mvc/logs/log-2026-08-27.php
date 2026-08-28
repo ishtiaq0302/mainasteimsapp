@@ -3715,3 +3715,950 @@ INFO - 2026-08-27 15:43:39 --> Model "Permission_m" initialized
 INFO - 2026-08-27 15:43:39 --> Model "usertype_m" initialized
 INFO - 2026-08-27 15:43:39 --> Final output sent to browser
 DEBUG - 2026-08-27 15:43:39 --> Total execution time: 2.2232
+INFO - 2026-08-27 16:44:22 --> Config Class Initialized
+INFO - 2026-08-27 16:44:22 --> Hooks Class Initialized
+DEBUG - 2026-08-27 16:44:22 --> UTF-8 Support Enabled
+INFO - 2026-08-27 16:44:22 --> Utf8 Class Initialized
+INFO - 2026-08-27 16:44:22 --> URI Class Initialized
+INFO - 2026-08-27 16:44:22 --> Router Class Initialized
+INFO - 2026-08-27 16:44:22 --> Output Class Initialized
+INFO - 2026-08-27 16:44:22 --> Security Class Initialized
+DEBUG - 2026-08-27 16:44:22 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-08-27 16:44:22 --> Input Class Initialized
+INFO - 2026-08-27 16:44:22 --> Language Class Initialized
+INFO - 2026-08-27 16:44:22 --> Loader Class Initialized
+INFO - 2026-08-27 16:44:22 --> Helper loaded: url_helper
+INFO - 2026-08-27 16:44:22 --> Helper loaded: html_helper
+INFO - 2026-08-27 16:44:22 --> Helper loaded: action_helper
+INFO - 2026-08-27 16:44:22 --> Helper loaded: security_helper
+INFO - 2026-08-27 16:44:22 --> Helper loaded: site_helper
+INFO - 2026-08-27 16:44:22 --> Helper loaded: file_helper
+INFO - 2026-08-27 16:44:22 --> Helper loaded: traffic_helper
+INFO - 2026-08-27 16:44:22 --> Controller Class Initialized
+DEBUG - 2026-08-27 16:44:22 --> Config file loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\config/iniconfig.php
+DEBUG - 2026-08-27 16:44:22 --> Cache class already loaded. Second attempt ignored.
+INFO - 2026-08-27 16:44:22 --> Database Driver Class Initialized
+INFO - 2026-08-27 16:44:25 --> Session: Class initialized using 'database' driver.
+INFO - 2026-08-27 16:44:25 --> Helper loaded: form_helper
+INFO - 2026-08-27 16:44:25 --> Form Validation Class Initialized
+INFO - 2026-08-27 16:44:25 --> Helper loaded: language_helper
+INFO - 2026-08-27 16:44:25 --> Helper loaded: date_helper
+INFO - 2026-08-27 16:44:25 --> Helper loaded: frontenddata_helper
+INFO - 2026-08-27 16:44:25 --> MY_Model class loaded
+INFO - 2026-08-27 16:44:25 --> Model "Frontend_setting_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "Setting_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "Classes_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "Pages_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "Posts_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "Fmenu_relation_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "Fmenu_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "Event_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "Teacher_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "Notice_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "Sociallink_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "Media_gallery_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "Slider_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "Country_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "City_m" initialized
+INFO - 2026-08-27 16:44:25 --> Model "Bankdetail_m" initialized
+INFO - 2026-08-27 16:44:25 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\frontpage/index.php
+INFO - 2026-08-27 16:44:25 --> Final output sent to browser
+DEBUG - 2026-08-27 16:44:25 --> Total execution time: 3.1294
+INFO - 2026-08-27 16:44:29 --> Config Class Initialized
+INFO - 2026-08-27 16:44:29 --> Hooks Class Initialized
+DEBUG - 2026-08-27 16:44:29 --> UTF-8 Support Enabled
+INFO - 2026-08-27 16:44:29 --> Utf8 Class Initialized
+INFO - 2026-08-27 16:44:29 --> URI Class Initialized
+INFO - 2026-08-27 16:44:29 --> Router Class Initialized
+INFO - 2026-08-27 16:44:29 --> Output Class Initialized
+INFO - 2026-08-27 16:44:29 --> Security Class Initialized
+DEBUG - 2026-08-27 16:44:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-08-27 16:44:29 --> Input Class Initialized
+INFO - 2026-08-27 16:44:29 --> Language Class Initialized
+INFO - 2026-08-27 16:44:29 --> Loader Class Initialized
+INFO - 2026-08-27 16:44:29 --> Helper loaded: url_helper
+INFO - 2026-08-27 16:44:29 --> Helper loaded: html_helper
+INFO - 2026-08-27 16:44:29 --> Helper loaded: action_helper
+INFO - 2026-08-27 16:44:29 --> Helper loaded: security_helper
+INFO - 2026-08-27 16:44:29 --> Helper loaded: site_helper
+INFO - 2026-08-27 16:44:29 --> Helper loaded: file_helper
+INFO - 2026-08-27 16:44:29 --> Helper loaded: traffic_helper
+INFO - 2026-08-27 16:44:29 --> Controller Class Initialized
+DEBUG - 2026-08-27 16:44:29 --> Config file loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\config/iniconfig.php
+INFO - 2026-08-27 16:44:29 --> MY_Model class loaded
+INFO - 2026-08-27 16:44:29 --> Database Driver Class Initialized
+INFO - 2026-08-27 16:44:31 --> Model "Setting_m" initialized
+INFO - 2026-08-27 16:44:31 --> Model "usertype_m" initialized
+INFO - 2026-08-27 16:44:31 --> Model "Loginlog_m" initialized
+INFO - 2026-08-27 16:44:31 --> Model "Signin_m" initialized
+INFO - 2026-08-27 16:44:31 --> Model "Permission_m" initialized
+INFO - 2026-08-27 16:44:31 --> Model "Site_m" initialized
+INFO - 2026-08-27 16:44:31 --> Model "Holiday_m" initialized
+INFO - 2026-08-27 16:44:31 --> Model "Schoolyear_m" initialized
+INFO - 2026-08-27 16:44:31 --> Session: Class initialized using 'database' driver.
+INFO - 2026-08-27 16:44:31 --> Helper loaded: language_helper
+INFO - 2026-08-27 16:44:31 --> Helper loaded: date_helper
+INFO - 2026-08-27 16:44:31 --> Helper loaded: form_helper
+INFO - 2026-08-27 16:44:31 --> Form Validation Class Initialized
+INFO - 2026-08-27 16:44:31 --> Model "Classes_m" initialized
+INFO - 2026-08-27 16:44:31 --> Model "Menu_m" initialized
+INFO - 2026-08-27 16:44:31 --> Model "Notice_m" initialized
+INFO - 2026-08-27 16:44:31 --> Model "alert_m" initialized
+INFO - 2026-08-27 16:44:31 --> Model "conversation_m" initialized
+INFO - 2026-08-27 16:44:31 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-08-27 16:44:31 --> Language file loaded: language/english/signin_lang.php
+INFO - 2026-08-27 16:44:31 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\signin/index.php
+INFO - 2026-08-27 16:44:31 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\_layout_signin.php
+INFO - 2026-08-27 16:44:31 --> Final output sent to browser
+DEBUG - 2026-08-27 16:44:31 --> Total execution time: 2.2843
+INFO - 2026-08-27 16:44:38 --> Config Class Initialized
+INFO - 2026-08-27 16:44:38 --> Hooks Class Initialized
+DEBUG - 2026-08-27 16:44:38 --> UTF-8 Support Enabled
+INFO - 2026-08-27 16:44:38 --> Utf8 Class Initialized
+INFO - 2026-08-27 16:44:38 --> URI Class Initialized
+INFO - 2026-08-27 16:44:38 --> Router Class Initialized
+INFO - 2026-08-27 16:44:38 --> Output Class Initialized
+INFO - 2026-08-27 16:44:38 --> Security Class Initialized
+DEBUG - 2026-08-27 16:44:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-08-27 16:44:38 --> Input Class Initialized
+INFO - 2026-08-27 16:44:38 --> Language Class Initialized
+INFO - 2026-08-27 16:44:38 --> Loader Class Initialized
+INFO - 2026-08-27 16:44:38 --> Helper loaded: url_helper
+INFO - 2026-08-27 16:44:38 --> Helper loaded: html_helper
+INFO - 2026-08-27 16:44:38 --> Helper loaded: action_helper
+INFO - 2026-08-27 16:44:38 --> Helper loaded: security_helper
+INFO - 2026-08-27 16:44:38 --> Helper loaded: site_helper
+INFO - 2026-08-27 16:44:38 --> Helper loaded: file_helper
+INFO - 2026-08-27 16:44:38 --> Helper loaded: traffic_helper
+INFO - 2026-08-27 16:44:38 --> Controller Class Initialized
+DEBUG - 2026-08-27 16:44:38 --> Config file loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\config/iniconfig.php
+INFO - 2026-08-27 16:44:39 --> MY_Model class loaded
+INFO - 2026-08-27 16:44:39 --> Database Driver Class Initialized
+INFO - 2026-08-27 16:44:41 --> Model "Setting_m" initialized
+INFO - 2026-08-27 16:44:41 --> Model "usertype_m" initialized
+INFO - 2026-08-27 16:44:41 --> Model "Loginlog_m" initialized
+INFO - 2026-08-27 16:44:41 --> Model "Signin_m" initialized
+INFO - 2026-08-27 16:44:41 --> Model "Permission_m" initialized
+INFO - 2026-08-27 16:44:41 --> Model "Site_m" initialized
+INFO - 2026-08-27 16:44:41 --> Model "Holiday_m" initialized
+INFO - 2026-08-27 16:44:41 --> Model "Schoolyear_m" initialized
+INFO - 2026-08-27 16:44:41 --> Session: Class initialized using 'database' driver.
+INFO - 2026-08-27 16:44:41 --> Helper loaded: language_helper
+INFO - 2026-08-27 16:44:41 --> Helper loaded: date_helper
+INFO - 2026-08-27 16:44:41 --> Helper loaded: form_helper
+INFO - 2026-08-27 16:44:41 --> Form Validation Class Initialized
+INFO - 2026-08-27 16:44:41 --> Model "Classes_m" initialized
+INFO - 2026-08-27 16:44:41 --> Model "Menu_m" initialized
+INFO - 2026-08-27 16:44:41 --> Model "Notice_m" initialized
+INFO - 2026-08-27 16:44:41 --> Model "alert_m" initialized
+INFO - 2026-08-27 16:44:41 --> Model "conversation_m" initialized
+INFO - 2026-08-27 16:44:41 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-08-27 16:44:41 --> Language file loaded: language/english/signin_lang.php
+INFO - 2026-08-27 16:44:41 --> Language file loaded: language/english/form_validation_lang.php
+INFO - 2026-08-27 16:44:41 --> Config Class Initialized
+INFO - 2026-08-27 16:44:41 --> Hooks Class Initialized
+DEBUG - 2026-08-27 16:44:41 --> UTF-8 Support Enabled
+INFO - 2026-08-27 16:44:41 --> Utf8 Class Initialized
+INFO - 2026-08-27 16:44:41 --> URI Class Initialized
+INFO - 2026-08-27 16:44:41 --> Router Class Initialized
+INFO - 2026-08-27 16:44:41 --> Output Class Initialized
+INFO - 2026-08-27 16:44:41 --> Security Class Initialized
+DEBUG - 2026-08-27 16:44:41 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-08-27 16:44:41 --> Input Class Initialized
+INFO - 2026-08-27 16:44:41 --> Language Class Initialized
+INFO - 2026-08-27 16:44:41 --> Loader Class Initialized
+INFO - 2026-08-27 16:44:41 --> Helper loaded: url_helper
+INFO - 2026-08-27 16:44:41 --> Helper loaded: html_helper
+INFO - 2026-08-27 16:44:41 --> Helper loaded: action_helper
+INFO - 2026-08-27 16:44:41 --> Helper loaded: security_helper
+INFO - 2026-08-27 16:44:41 --> Helper loaded: site_helper
+INFO - 2026-08-27 16:44:41 --> Helper loaded: file_helper
+INFO - 2026-08-27 16:44:41 --> Helper loaded: traffic_helper
+INFO - 2026-08-27 16:44:41 --> Controller Class Initialized
+DEBUG - 2026-08-27 16:44:41 --> Config file loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\config/iniconfig.php
+INFO - 2026-08-27 16:44:41 --> MY_Model class loaded
+INFO - 2026-08-27 16:44:41 --> Database Driver Class Initialized
+INFO - 2026-08-27 16:44:43 --> Model "Setting_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "usertype_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Loginlog_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Signin_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Permission_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Site_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Holiday_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Schoolyear_m" initialized
+INFO - 2026-08-27 16:44:43 --> Session: Class initialized using 'database' driver.
+INFO - 2026-08-27 16:44:43 --> Helper loaded: language_helper
+INFO - 2026-08-27 16:44:43 --> Helper loaded: date_helper
+INFO - 2026-08-27 16:44:43 --> Helper loaded: form_helper
+INFO - 2026-08-27 16:44:43 --> Form Validation Class Initialized
+INFO - 2026-08-27 16:44:43 --> Model "Classes_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Menu_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Notice_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "alert_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "conversation_m" initialized
+INFO - 2026-08-27 16:44:43 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-08-27 16:44:43 --> Model "systemadmin_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Dashboard_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Automation_shudulu_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Automation_rec_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "User_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "student_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Teacher_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Parents_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Sattendance_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Tattendance_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Subjectattendance_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Eattendance_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Subject_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "feetypes_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Invoice_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Expense_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Payment_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Lmember_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Book_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Issue_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "student_info_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Hmember_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Tmember_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Event_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "visitorinfo_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Income_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Make_payment_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Maininvoice_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Studentrelation_m" initialized
+INFO - 2026-08-27 16:44:43 --> Model "Conference_m" initialized
+INFO - 2026-08-27 16:44:43 --> Language file loaded: language/english/dashboard_lang.php
+INFO - 2026-08-27 16:44:43 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_header.php
+INFO - 2026-08-27 16:44:43 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_topbar.php
+INFO - 2026-08-27 16:44:43 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_menu.php
+ERROR - 2026-08-27 16:44:43 --> Could not find the language line "menu_students"
+ERROR - 2026-08-27 16:44:43 --> Could not find the language line "menu_teachers"
+ERROR - 2026-08-27 16:44:43 --> Could not find the language line "menu_users"
+INFO - 2026-08-27 16:44:43 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/ProfileBox.php
+INFO - 2026-08-27 16:44:43 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/NoticeBoard.php
+INFO - 2026-08-27 16:44:43 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/TeacherAttendance.php
+INFO - 2026-08-27 16:44:43 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/AttendanceHighChartJavascript.php
+INFO - 2026-08-27 16:44:43 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/EarningHighChartJavascript.php
+INFO - 2026-08-27 16:44:43 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/CalenderJavascript.php
+INFO - 2026-08-27 16:44:43 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/VisitorHighChartJavascript.php
+INFO - 2026-08-27 16:44:43 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/index.php
+INFO - 2026-08-27 16:44:43 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_footer.php
+INFO - 2026-08-27 16:44:43 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\_layout_main.php
+INFO - 2026-08-27 16:44:43 --> Final output sent to browser
+DEBUG - 2026-08-27 16:44:43 --> Total execution time: 2.3725
+INFO - 2026-08-27 16:45:03 --> Config Class Initialized
+INFO - 2026-08-27 16:45:03 --> Hooks Class Initialized
+DEBUG - 2026-08-27 16:45:03 --> UTF-8 Support Enabled
+INFO - 2026-08-27 16:45:03 --> Utf8 Class Initialized
+INFO - 2026-08-27 16:45:03 --> URI Class Initialized
+INFO - 2026-08-27 16:45:03 --> Router Class Initialized
+INFO - 2026-08-27 16:45:03 --> Output Class Initialized
+INFO - 2026-08-27 16:45:03 --> Security Class Initialized
+DEBUG - 2026-08-27 16:45:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-08-27 16:45:03 --> Input Class Initialized
+INFO - 2026-08-27 16:45:03 --> Language Class Initialized
+INFO - 2026-08-27 16:45:03 --> Loader Class Initialized
+INFO - 2026-08-27 16:45:03 --> Helper loaded: url_helper
+INFO - 2026-08-27 16:45:03 --> Helper loaded: html_helper
+INFO - 2026-08-27 16:45:03 --> Helper loaded: action_helper
+INFO - 2026-08-27 16:45:03 --> Helper loaded: security_helper
+INFO - 2026-08-27 16:45:03 --> Helper loaded: site_helper
+INFO - 2026-08-27 16:45:03 --> Helper loaded: file_helper
+INFO - 2026-08-27 16:45:03 --> Helper loaded: traffic_helper
+INFO - 2026-08-27 16:45:03 --> Controller Class Initialized
+DEBUG - 2026-08-27 16:45:03 --> Config file loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\config/iniconfig.php
+INFO - 2026-08-27 16:45:03 --> MY_Model class loaded
+INFO - 2026-08-27 16:45:03 --> Database Driver Class Initialized
+INFO - 2026-08-27 16:45:04 --> Config Class Initialized
+INFO - 2026-08-27 16:45:04 --> Hooks Class Initialized
+DEBUG - 2026-08-27 16:45:04 --> UTF-8 Support Enabled
+INFO - 2026-08-27 16:45:04 --> Utf8 Class Initialized
+INFO - 2026-08-27 16:45:04 --> URI Class Initialized
+INFO - 2026-08-27 16:45:04 --> Router Class Initialized
+INFO - 2026-08-27 16:45:04 --> Output Class Initialized
+INFO - 2026-08-27 16:45:04 --> Security Class Initialized
+DEBUG - 2026-08-27 16:45:05 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-08-27 16:45:05 --> Input Class Initialized
+INFO - 2026-08-27 16:45:05 --> Language Class Initialized
+INFO - 2026-08-27 16:45:05 --> Loader Class Initialized
+INFO - 2026-08-27 16:45:05 --> Helper loaded: url_helper
+INFO - 2026-08-27 16:45:05 --> Helper loaded: html_helper
+INFO - 2026-08-27 16:45:05 --> Helper loaded: action_helper
+INFO - 2026-08-27 16:45:05 --> Helper loaded: security_helper
+INFO - 2026-08-27 16:45:05 --> Helper loaded: site_helper
+INFO - 2026-08-27 16:45:05 --> Helper loaded: file_helper
+INFO - 2026-08-27 16:45:05 --> Helper loaded: traffic_helper
+INFO - 2026-08-27 16:45:05 --> Controller Class Initialized
+DEBUG - 2026-08-27 16:45:05 --> Config file loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\config/iniconfig.php
+INFO - 2026-08-27 16:45:05 --> MY_Model class loaded
+INFO - 2026-08-27 16:45:05 --> Database Driver Class Initialized
+INFO - 2026-08-27 16:45:05 --> Model "Setting_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "usertype_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "Loginlog_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "Signin_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "Permission_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "Site_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "Holiday_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "Schoolyear_m" initialized
+INFO - 2026-08-27 16:45:05 --> Session: Class initialized using 'database' driver.
+INFO - 2026-08-27 16:45:05 --> Helper loaded: language_helper
+INFO - 2026-08-27 16:45:05 --> Helper loaded: date_helper
+INFO - 2026-08-27 16:45:05 --> Helper loaded: form_helper
+INFO - 2026-08-27 16:45:05 --> Form Validation Class Initialized
+INFO - 2026-08-27 16:45:05 --> Model "Classes_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "Menu_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "Notice_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "alert_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "conversation_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "Event_m" initialized
+INFO - 2026-08-27 16:45:05 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-08-27 16:45:05 --> Model "Subject_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "Parents_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "Teacher_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "student_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "Subjectteacher_m" initialized
+INFO - 2026-08-27 16:45:05 --> Model "Studentrelation_m" initialized
+INFO - 2026-08-27 16:45:05 --> Language file loaded: language/english/subject_lang.php
+INFO - 2026-08-27 16:45:05 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_header.php
+INFO - 2026-08-27 16:45:05 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_topbar.php
+INFO - 2026-08-27 16:45:05 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_menu.php
+INFO - 2026-08-27 16:45:05 --> Language file loaded: language/english/campus_lang.php
+INFO - 2026-08-27 16:45:05 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\subject/index.php
+INFO - 2026-08-27 16:45:05 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_footer.php
+INFO - 2026-08-27 16:45:05 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\_layout_main.php
+INFO - 2026-08-27 16:45:05 --> Final output sent to browser
+DEBUG - 2026-08-27 16:45:05 --> Total execution time: 2.3571
+INFO - 2026-08-27 16:45:06 --> Config Class Initialized
+INFO - 2026-08-27 16:45:06 --> Hooks Class Initialized
+DEBUG - 2026-08-27 16:45:06 --> UTF-8 Support Enabled
+INFO - 2026-08-27 16:45:06 --> Utf8 Class Initialized
+INFO - 2026-08-27 16:45:06 --> URI Class Initialized
+INFO - 2026-08-27 16:45:06 --> Router Class Initialized
+INFO - 2026-08-27 16:45:06 --> Output Class Initialized
+INFO - 2026-08-27 16:45:06 --> Security Class Initialized
+DEBUG - 2026-08-27 16:45:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-08-27 16:45:06 --> Input Class Initialized
+INFO - 2026-08-27 16:45:06 --> Language Class Initialized
+INFO - 2026-08-27 16:45:06 --> Loader Class Initialized
+INFO - 2026-08-27 16:45:06 --> Helper loaded: url_helper
+INFO - 2026-08-27 16:45:06 --> Helper loaded: html_helper
+INFO - 2026-08-27 16:45:06 --> Helper loaded: action_helper
+INFO - 2026-08-27 16:45:06 --> Helper loaded: security_helper
+INFO - 2026-08-27 16:45:06 --> Helper loaded: site_helper
+INFO - 2026-08-27 16:45:06 --> Helper loaded: file_helper
+INFO - 2026-08-27 16:45:06 --> Helper loaded: traffic_helper
+INFO - 2026-08-27 16:45:06 --> Controller Class Initialized
+DEBUG - 2026-08-27 16:45:06 --> Config file loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\config/iniconfig.php
+INFO - 2026-08-27 16:45:06 --> MY_Model class loaded
+INFO - 2026-08-27 16:45:06 --> Database Driver Class Initialized
+INFO - 2026-08-27 16:45:07 --> Config Class Initialized
+INFO - 2026-08-27 16:45:07 --> Hooks Class Initialized
+DEBUG - 2026-08-27 16:45:07 --> UTF-8 Support Enabled
+INFO - 2026-08-27 16:45:07 --> Utf8 Class Initialized
+INFO - 2026-08-27 16:45:07 --> URI Class Initialized
+INFO - 2026-08-27 16:45:07 --> Router Class Initialized
+INFO - 2026-08-27 16:45:07 --> Output Class Initialized
+INFO - 2026-08-27 16:45:07 --> Security Class Initialized
+DEBUG - 2026-08-27 16:45:07 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-08-27 16:45:07 --> Input Class Initialized
+INFO - 2026-08-27 16:45:07 --> Language Class Initialized
+INFO - 2026-08-27 16:45:07 --> Loader Class Initialized
+INFO - 2026-08-27 16:45:07 --> Helper loaded: url_helper
+INFO - 2026-08-27 16:45:07 --> Helper loaded: html_helper
+INFO - 2026-08-27 16:45:07 --> Helper loaded: action_helper
+INFO - 2026-08-27 16:45:07 --> Helper loaded: security_helper
+INFO - 2026-08-27 16:45:07 --> Helper loaded: site_helper
+INFO - 2026-08-27 16:45:07 --> Helper loaded: file_helper
+INFO - 2026-08-27 16:45:07 --> Helper loaded: traffic_helper
+INFO - 2026-08-27 16:45:07 --> Controller Class Initialized
+DEBUG - 2026-08-27 16:45:07 --> Config file loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\config/iniconfig.php
+INFO - 2026-08-27 16:45:07 --> MY_Model class loaded
+INFO - 2026-08-27 16:45:07 --> Database Driver Class Initialized
+INFO - 2026-08-27 16:45:07 --> Model "Setting_m" initialized
+INFO - 2026-08-27 16:45:07 --> Model "usertype_m" initialized
+INFO - 2026-08-27 16:45:07 --> Model "Loginlog_m" initialized
+INFO - 2026-08-27 16:45:07 --> Model "Signin_m" initialized
+INFO - 2026-08-27 16:45:07 --> Model "Permission_m" initialized
+INFO - 2026-08-27 16:45:07 --> Model "Site_m" initialized
+INFO - 2026-08-27 16:45:07 --> Model "Holiday_m" initialized
+INFO - 2026-08-27 16:45:07 --> Model "Schoolyear_m" initialized
+INFO - 2026-08-27 16:45:07 --> Session: Class initialized using 'database' driver.
+INFO - 2026-08-27 16:45:07 --> Helper loaded: language_helper
+INFO - 2026-08-27 16:45:07 --> Helper loaded: date_helper
+INFO - 2026-08-27 16:45:07 --> Helper loaded: form_helper
+INFO - 2026-08-27 16:45:07 --> Form Validation Class Initialized
+INFO - 2026-08-27 16:45:07 --> Model "Classes_m" initialized
+INFO - 2026-08-27 16:45:07 --> Model "Menu_m" initialized
+INFO - 2026-08-27 16:45:07 --> Model "Notice_m" initialized
+INFO - 2026-08-27 16:45:07 --> Model "alert_m" initialized
+INFO - 2026-08-27 16:45:07 --> Model "conversation_m" initialized
+INFO - 2026-08-27 16:45:07 --> Model "Event_m" initialized
+INFO - 2026-08-27 16:45:07 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-08-27 16:45:07 --> Model "Campus_m" initialized
+INFO - 2026-08-27 16:45:07 --> Model "Hmember_m" initialized
+INFO - 2026-08-27 16:45:07 --> Model "student_m" initialized
+INFO - 2026-08-27 16:45:07 --> Language file loaded: language/english/campus_lang.php
+INFO - 2026-08-27 16:45:07 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_header.php
+INFO - 2026-08-27 16:45:07 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_topbar.php
+INFO - 2026-08-27 16:45:07 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_menu.php
+ERROR - 2026-08-27 16:45:07 --> Could not find the language line "slno"
+ERROR - 2026-08-27 16:45:07 --> Could not find the language line "action"
+ERROR - 2026-08-27 16:45:07 --> Could not find the language line "slno"
+ERROR - 2026-08-27 16:45:07 --> Could not find the language line "action"
+ERROR - 2026-08-27 16:45:07 --> Could not find the language line "edit"
+ERROR - 2026-08-27 16:45:07 --> Could not find the language line "delete"
+INFO - 2026-08-27 16:45:07 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\campus/index.php
+INFO - 2026-08-27 16:45:07 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_footer.php
+INFO - 2026-08-27 16:45:07 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\_layout_main.php
+INFO - 2026-08-27 16:45:07 --> Final output sent to browser
+DEBUG - 2026-08-27 16:45:07 --> Total execution time: 2.3867
+INFO - 2026-08-27 16:45:08 --> Config Class Initialized
+INFO - 2026-08-27 16:45:08 --> Hooks Class Initialized
+DEBUG - 2026-08-27 16:45:08 --> UTF-8 Support Enabled
+INFO - 2026-08-27 16:45:08 --> Utf8 Class Initialized
+INFO - 2026-08-27 16:45:08 --> URI Class Initialized
+INFO - 2026-08-27 16:45:08 --> Router Class Initialized
+INFO - 2026-08-27 16:45:08 --> Output Class Initialized
+INFO - 2026-08-27 16:45:08 --> Security Class Initialized
+DEBUG - 2026-08-27 16:45:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-08-27 16:45:08 --> Input Class Initialized
+INFO - 2026-08-27 16:45:08 --> Language Class Initialized
+INFO - 2026-08-27 16:45:08 --> Loader Class Initialized
+INFO - 2026-08-27 16:45:08 --> Helper loaded: url_helper
+INFO - 2026-08-27 16:45:08 --> Helper loaded: html_helper
+INFO - 2026-08-27 16:45:08 --> Helper loaded: action_helper
+INFO - 2026-08-27 16:45:08 --> Helper loaded: security_helper
+INFO - 2026-08-27 16:45:08 --> Helper loaded: site_helper
+INFO - 2026-08-27 16:45:08 --> Helper loaded: file_helper
+INFO - 2026-08-27 16:45:08 --> Helper loaded: traffic_helper
+INFO - 2026-08-27 16:45:08 --> Controller Class Initialized
+DEBUG - 2026-08-27 16:45:08 --> Config file loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\config/iniconfig.php
+INFO - 2026-08-27 16:45:08 --> MY_Model class loaded
+INFO - 2026-08-27 16:45:08 --> Database Driver Class Initialized
+INFO - 2026-08-27 16:45:08 --> Model "Setting_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "usertype_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "Loginlog_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "Signin_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "Permission_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "Site_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "Holiday_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "Schoolyear_m" initialized
+INFO - 2026-08-27 16:45:08 --> Session: Class initialized using 'database' driver.
+INFO - 2026-08-27 16:45:08 --> Helper loaded: language_helper
+INFO - 2026-08-27 16:45:08 --> Helper loaded: date_helper
+INFO - 2026-08-27 16:45:08 --> Helper loaded: form_helper
+INFO - 2026-08-27 16:45:08 --> Form Validation Class Initialized
+INFO - 2026-08-27 16:45:08 --> Model "Classes_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "Menu_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "Notice_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "alert_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "conversation_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "Event_m" initialized
+INFO - 2026-08-27 16:45:08 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-08-27 16:45:08 --> Model "student_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "Staff_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "Parents_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "Campus_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "Section_m" initialized
+INFO - 2026-08-27 16:45:08 --> Model "Studentrelation_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Studentextend_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Subject_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Routine_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Teacher_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Subjectattendance_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Sattendance_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Invoice_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Payment_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Weaverandfine_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "feetypes_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Exam_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Grade_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "markpercentage_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "markrelation_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Mark_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Document_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Leaveapplication_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "User_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Asset_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "systemadmin_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Conference_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Vendor_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Productcategory_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Productsupplier_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Productwarehouse_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Book_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Hostel_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Studentgroup_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Location_m" initialized
+INFO - 2026-08-27 16:45:09 --> Language file loaded: language/english/student_lang.php
+INFO - 2026-08-27 16:45:09 --> Language file loaded: language/english/section_lang.php
+INFO - 2026-08-27 16:45:09 --> Final output sent to browser
+DEBUG - 2026-08-27 16:45:09 --> Total execution time: 2.3961
+INFO - 2026-08-27 16:45:09 --> Model "Setting_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "usertype_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Loginlog_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Signin_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Permission_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Site_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Holiday_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Schoolyear_m" initialized
+INFO - 2026-08-27 16:45:09 --> Session: Class initialized using 'database' driver.
+INFO - 2026-08-27 16:45:09 --> Helper loaded: language_helper
+INFO - 2026-08-27 16:45:09 --> Helper loaded: date_helper
+INFO - 2026-08-27 16:45:09 --> Helper loaded: form_helper
+INFO - 2026-08-27 16:45:09 --> Form Validation Class Initialized
+INFO - 2026-08-27 16:45:09 --> Model "Classes_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Menu_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Notice_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "alert_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "conversation_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Event_m" initialized
+INFO - 2026-08-27 16:45:09 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-08-27 16:45:09 --> Model "Lecture_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Parents_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "student_m" initialized
+INFO - 2026-08-27 16:45:09 --> Model "Studentrelation_m" initialized
+INFO - 2026-08-27 16:45:09 --> Language file loaded: language/english/lecture_lang.php
+INFO - 2026-08-27 16:45:09 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_header.php
+INFO - 2026-08-27 16:45:09 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_topbar.php
+INFO - 2026-08-27 16:45:09 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_menu.php
+INFO - 2026-08-27 16:45:09 --> Language file loaded: language/english/campus_lang.php
+INFO - 2026-08-27 16:45:09 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\lecture/index.php
+INFO - 2026-08-27 16:45:09 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_footer.php
+INFO - 2026-08-27 16:45:09 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\_layout_main.php
+INFO - 2026-08-27 16:45:09 --> Final output sent to browser
+DEBUG - 2026-08-27 16:45:09 --> Total execution time: 2.3179
+INFO - 2026-08-27 16:45:10 --> Config Class Initialized
+INFO - 2026-08-27 16:45:10 --> Hooks Class Initialized
+DEBUG - 2026-08-27 16:45:10 --> UTF-8 Support Enabled
+INFO - 2026-08-27 16:45:10 --> Utf8 Class Initialized
+INFO - 2026-08-27 16:45:10 --> URI Class Initialized
+INFO - 2026-08-27 16:45:10 --> Router Class Initialized
+INFO - 2026-08-27 16:45:10 --> Output Class Initialized
+INFO - 2026-08-27 16:45:10 --> Security Class Initialized
+DEBUG - 2026-08-27 16:45:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-08-27 16:45:10 --> Input Class Initialized
+INFO - 2026-08-27 16:45:10 --> Language Class Initialized
+INFO - 2026-08-27 16:45:10 --> Loader Class Initialized
+INFO - 2026-08-27 16:45:10 --> Helper loaded: url_helper
+INFO - 2026-08-27 16:45:10 --> Helper loaded: html_helper
+INFO - 2026-08-27 16:45:10 --> Helper loaded: action_helper
+INFO - 2026-08-27 16:45:10 --> Helper loaded: security_helper
+INFO - 2026-08-27 16:45:10 --> Helper loaded: site_helper
+INFO - 2026-08-27 16:45:10 --> Helper loaded: file_helper
+INFO - 2026-08-27 16:45:10 --> Helper loaded: traffic_helper
+INFO - 2026-08-27 16:45:10 --> Controller Class Initialized
+DEBUG - 2026-08-27 16:45:10 --> Config file loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\config/iniconfig.php
+INFO - 2026-08-27 16:45:10 --> MY_Model class loaded
+INFO - 2026-08-27 16:45:10 --> Database Driver Class Initialized
+INFO - 2026-08-27 16:45:10 --> Config Class Initialized
+INFO - 2026-08-27 16:45:10 --> Hooks Class Initialized
+DEBUG - 2026-08-27 16:45:10 --> UTF-8 Support Enabled
+INFO - 2026-08-27 16:45:10 --> Utf8 Class Initialized
+INFO - 2026-08-27 16:45:10 --> URI Class Initialized
+INFO - 2026-08-27 16:45:10 --> Router Class Initialized
+INFO - 2026-08-27 16:45:10 --> Output Class Initialized
+INFO - 2026-08-27 16:45:10 --> Security Class Initialized
+DEBUG - 2026-08-27 16:45:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-08-27 16:45:10 --> Input Class Initialized
+INFO - 2026-08-27 16:45:10 --> Language Class Initialized
+INFO - 2026-08-27 16:45:10 --> Loader Class Initialized
+INFO - 2026-08-27 16:45:10 --> Helper loaded: url_helper
+INFO - 2026-08-27 16:45:10 --> Helper loaded: html_helper
+INFO - 2026-08-27 16:45:10 --> Helper loaded: action_helper
+INFO - 2026-08-27 16:45:10 --> Helper loaded: security_helper
+INFO - 2026-08-27 16:45:10 --> Helper loaded: site_helper
+INFO - 2026-08-27 16:45:10 --> Helper loaded: file_helper
+INFO - 2026-08-27 16:45:10 --> Helper loaded: traffic_helper
+INFO - 2026-08-27 16:45:10 --> Controller Class Initialized
+DEBUG - 2026-08-27 16:45:10 --> Config file loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\config/iniconfig.php
+INFO - 2026-08-27 16:45:10 --> Model "Setting_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "usertype_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "Loginlog_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "Signin_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "Permission_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "Site_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "Holiday_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "Schoolyear_m" initialized
+INFO - 2026-08-27 16:45:10 --> Session: Class initialized using 'database' driver.
+INFO - 2026-08-27 16:45:10 --> Helper loaded: language_helper
+INFO - 2026-08-27 16:45:10 --> MY_Model class loaded
+INFO - 2026-08-27 16:45:10 --> Helper loaded: date_helper
+INFO - 2026-08-27 16:45:10 --> Helper loaded: form_helper
+INFO - 2026-08-27 16:45:10 --> Form Validation Class Initialized
+INFO - 2026-08-27 16:45:10 --> Model "Classes_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "Menu_m" initialized
+INFO - 2026-08-27 16:45:10 --> Database Driver Class Initialized
+INFO - 2026-08-27 16:45:10 --> Model "Notice_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "alert_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "conversation_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "Event_m" initialized
+INFO - 2026-08-27 16:45:10 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-08-27 16:45:10 --> Model "Assignment_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "Assignmentanswer_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "Section_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "Subject_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "Parents_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "student_m" initialized
+INFO - 2026-08-27 16:45:10 --> Model "Studentrelation_m" initialized
+INFO - 2026-08-27 16:45:10 --> Language file loaded: language/english/assignment_lang.php
+INFO - 2026-08-27 16:45:10 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_header.php
+INFO - 2026-08-27 16:45:10 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_topbar.php
+INFO - 2026-08-27 16:45:10 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_menu.php
+INFO - 2026-08-27 16:45:10 --> Language file loaded: language/english/campus_lang.php
+INFO - 2026-08-27 16:45:10 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\assignment/index.php
+INFO - 2026-08-27 16:45:10 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_footer.php
+INFO - 2026-08-27 16:45:10 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\_layout_main.php
+INFO - 2026-08-27 16:45:10 --> Final output sent to browser
+DEBUG - 2026-08-27 16:45:10 --> Total execution time: 2.3107
+INFO - 2026-08-27 16:45:11 --> Config Class Initialized
+INFO - 2026-08-27 16:45:11 --> Hooks Class Initialized
+DEBUG - 2026-08-27 16:45:11 --> UTF-8 Support Enabled
+INFO - 2026-08-27 16:45:11 --> Utf8 Class Initialized
+INFO - 2026-08-27 16:45:11 --> URI Class Initialized
+INFO - 2026-08-27 16:45:11 --> Router Class Initialized
+INFO - 2026-08-27 16:45:11 --> Output Class Initialized
+INFO - 2026-08-27 16:45:11 --> Security Class Initialized
+DEBUG - 2026-08-27 16:45:11 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-08-27 16:45:11 --> Input Class Initialized
+INFO - 2026-08-27 16:45:11 --> Language Class Initialized
+INFO - 2026-08-27 16:45:11 --> Loader Class Initialized
+INFO - 2026-08-27 16:45:11 --> Helper loaded: url_helper
+INFO - 2026-08-27 16:45:11 --> Helper loaded: html_helper
+INFO - 2026-08-27 16:45:11 --> Helper loaded: action_helper
+INFO - 2026-08-27 16:45:11 --> Helper loaded: security_helper
+INFO - 2026-08-27 16:45:11 --> Helper loaded: site_helper
+INFO - 2026-08-27 16:45:11 --> Helper loaded: file_helper
+INFO - 2026-08-27 16:45:11 --> Helper loaded: traffic_helper
+INFO - 2026-08-27 16:45:11 --> Controller Class Initialized
+DEBUG - 2026-08-27 16:45:11 --> Config file loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\config/iniconfig.php
+INFO - 2026-08-27 16:45:11 --> MY_Model class loaded
+INFO - 2026-08-27 16:45:11 --> Database Driver Class Initialized
+INFO - 2026-08-27 16:45:12 --> Model "Setting_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "usertype_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Loginlog_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Signin_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Permission_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Site_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Holiday_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Schoolyear_m" initialized
+INFO - 2026-08-27 16:45:12 --> Session: Class initialized using 'database' driver.
+INFO - 2026-08-27 16:45:12 --> Helper loaded: language_helper
+INFO - 2026-08-27 16:45:12 --> Helper loaded: date_helper
+INFO - 2026-08-27 16:45:12 --> Helper loaded: form_helper
+INFO - 2026-08-27 16:45:12 --> Form Validation Class Initialized
+INFO - 2026-08-27 16:45:12 --> Model "Classes_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Menu_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Notice_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "alert_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "conversation_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Event_m" initialized
+INFO - 2026-08-27 16:45:12 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-08-27 16:45:12 --> Model "student_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Staff_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Parents_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Campus_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Section_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Studentrelation_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Studentextend_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Subject_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Routine_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Teacher_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Subjectattendance_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Sattendance_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Invoice_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Payment_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Weaverandfine_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "feetypes_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Exam_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Grade_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "markpercentage_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "markrelation_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Mark_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Document_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Leaveapplication_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "User_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Asset_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "systemadmin_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Conference_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Vendor_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Productcategory_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Productsupplier_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Productwarehouse_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Book_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Hostel_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Studentgroup_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Location_m" initialized
+INFO - 2026-08-27 16:45:12 --> Language file loaded: language/english/student_lang.php
+INFO - 2026-08-27 16:45:12 --> Language file loaded: language/english/section_lang.php
+INFO - 2026-08-27 16:45:12 --> Final output sent to browser
+DEBUG - 2026-08-27 16:45:12 --> Total execution time: 2.3195
+INFO - 2026-08-27 16:45:12 --> Model "Setting_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "usertype_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Loginlog_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Signin_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Permission_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Site_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Holiday_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Schoolyear_m" initialized
+INFO - 2026-08-27 16:45:12 --> Session: Class initialized using 'database' driver.
+INFO - 2026-08-27 16:45:12 --> Helper loaded: language_helper
+INFO - 2026-08-27 16:45:12 --> Helper loaded: date_helper
+INFO - 2026-08-27 16:45:12 --> Helper loaded: form_helper
+INFO - 2026-08-27 16:45:12 --> Form Validation Class Initialized
+INFO - 2026-08-27 16:45:12 --> Model "Classes_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Menu_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Notice_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "alert_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "conversation_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Event_m" initialized
+INFO - 2026-08-27 16:45:12 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-08-27 16:45:12 --> Model "Routine_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Section_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Subject_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Parents_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "student_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Teacher_m" initialized
+INFO - 2026-08-27 16:45:12 --> Model "Subjectteacher_m" initialized
+INFO - 2026-08-27 16:45:12 --> Language file loaded: language/english/routine_lang.php
+INFO - 2026-08-27 16:45:12 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_header.php
+INFO - 2026-08-27 16:45:12 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_topbar.php
+INFO - 2026-08-27 16:45:12 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_menu.php
+INFO - 2026-08-27 16:45:12 --> Language file loaded: language/english/campus_lang.php
+INFO - 2026-08-27 16:45:12 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\routine/index.php
+INFO - 2026-08-27 16:45:12 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_footer.php
+INFO - 2026-08-27 16:45:12 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\_layout_main.php
+INFO - 2026-08-27 16:45:12 --> Final output sent to browser
+DEBUG - 2026-08-27 16:45:12 --> Total execution time: 2.4200
+INFO - 2026-08-27 16:45:13 --> Config Class Initialized
+INFO - 2026-08-27 16:45:13 --> Hooks Class Initialized
+DEBUG - 2026-08-27 16:45:13 --> UTF-8 Support Enabled
+INFO - 2026-08-27 16:45:13 --> Utf8 Class Initialized
+INFO - 2026-08-27 16:45:13 --> URI Class Initialized
+INFO - 2026-08-27 16:45:13 --> Router Class Initialized
+INFO - 2026-08-27 16:45:13 --> Output Class Initialized
+INFO - 2026-08-27 16:45:13 --> Security Class Initialized
+DEBUG - 2026-08-27 16:45:13 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-08-27 16:45:13 --> Input Class Initialized
+INFO - 2026-08-27 16:45:13 --> Language Class Initialized
+INFO - 2026-08-27 16:45:13 --> Loader Class Initialized
+INFO - 2026-08-27 16:45:13 --> Helper loaded: url_helper
+INFO - 2026-08-27 16:45:13 --> Helper loaded: html_helper
+INFO - 2026-08-27 16:45:13 --> Helper loaded: action_helper
+INFO - 2026-08-27 16:45:13 --> Helper loaded: security_helper
+INFO - 2026-08-27 16:45:13 --> Helper loaded: site_helper
+INFO - 2026-08-27 16:45:13 --> Helper loaded: file_helper
+INFO - 2026-08-27 16:45:13 --> Helper loaded: traffic_helper
+INFO - 2026-08-27 16:45:13 --> Controller Class Initialized
+DEBUG - 2026-08-27 16:45:13 --> Config file loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\config/iniconfig.php
+INFO - 2026-08-27 16:45:13 --> MY_Model class loaded
+INFO - 2026-08-27 16:45:13 --> Database Driver Class Initialized
+INFO - 2026-08-27 16:45:13 --> Model "Setting_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "usertype_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Loginlog_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Signin_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Permission_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Site_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Holiday_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Schoolyear_m" initialized
+INFO - 2026-08-27 16:45:13 --> Session: Class initialized using 'database' driver.
+INFO - 2026-08-27 16:45:13 --> Helper loaded: language_helper
+INFO - 2026-08-27 16:45:13 --> Helper loaded: date_helper
+INFO - 2026-08-27 16:45:13 --> Helper loaded: form_helper
+INFO - 2026-08-27 16:45:13 --> Form Validation Class Initialized
+INFO - 2026-08-27 16:45:13 --> Model "Classes_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Menu_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Notice_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "alert_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "conversation_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Event_m" initialized
+INFO - 2026-08-27 16:45:13 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-08-27 16:45:13 --> Model "student_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Staff_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Parents_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Campus_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Section_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Studentrelation_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Studentextend_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Subject_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Routine_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Teacher_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Subjectattendance_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Sattendance_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Invoice_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Payment_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Weaverandfine_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "feetypes_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Exam_m" initialized
+INFO - 2026-08-27 16:45:13 --> Model "Grade_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "markpercentage_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "markrelation_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "Mark_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "Document_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "Leaveapplication_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "User_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "Asset_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "systemadmin_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "Conference_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "Vendor_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "Productcategory_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "Productsupplier_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "Productwarehouse_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "Book_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "Hostel_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "Studentgroup_m" initialized
+INFO - 2026-08-27 16:45:14 --> Model "Location_m" initialized
+INFO - 2026-08-27 16:45:14 --> Language file loaded: language/english/student_lang.php
+INFO - 2026-08-27 16:45:14 --> Language file loaded: language/english/section_lang.php
+INFO - 2026-08-27 16:45:14 --> Final output sent to browser
+DEBUG - 2026-08-27 16:45:14 --> Total execution time: 2.3125
+INFO - 2026-08-27 16:45:15 --> Model "Setting_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "usertype_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Loginlog_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Signin_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Permission_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Site_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Holiday_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Schoolyear_m" initialized
+INFO - 2026-08-27 16:45:15 --> Session: Class initialized using 'database' driver.
+INFO - 2026-08-27 16:45:15 --> Helper loaded: language_helper
+INFO - 2026-08-27 16:45:15 --> Helper loaded: date_helper
+INFO - 2026-08-27 16:45:15 --> Helper loaded: form_helper
+INFO - 2026-08-27 16:45:15 --> Form Validation Class Initialized
+INFO - 2026-08-27 16:45:15 --> Model "Classes_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Menu_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Notice_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "alert_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "conversation_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Event_m" initialized
+INFO - 2026-08-27 16:45:15 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-08-27 16:45:15 --> Model "student_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Staff_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Parents_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Campus_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Section_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Studentrelation_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Studentextend_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Subject_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Routine_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Teacher_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Subjectattendance_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Sattendance_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Invoice_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Payment_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Weaverandfine_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "feetypes_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Exam_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Grade_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "markpercentage_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "markrelation_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Mark_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Document_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Leaveapplication_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "User_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Asset_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "systemadmin_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Conference_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Vendor_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Productcategory_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Productsupplier_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Productwarehouse_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Book_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Hostel_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Studentgroup_m" initialized
+INFO - 2026-08-27 16:45:15 --> Model "Location_m" initialized
+INFO - 2026-08-27 16:45:15 --> Language file loaded: language/english/student_lang.php
+INFO - 2026-08-27 16:45:15 --> Language file loaded: language/english/section_lang.php
+INFO - 2026-08-27 16:45:15 --> Final output sent to browser
+DEBUG - 2026-08-27 16:45:15 --> Total execution time: 2.3889
+INFO - 2026-08-27 16:49:09 --> Config Class Initialized
+INFO - 2026-08-27 16:49:09 --> Hooks Class Initialized
+DEBUG - 2026-08-27 16:49:09 --> UTF-8 Support Enabled
+INFO - 2026-08-27 16:49:09 --> Utf8 Class Initialized
+INFO - 2026-08-27 16:49:09 --> URI Class Initialized
+INFO - 2026-08-27 16:49:09 --> Router Class Initialized
+INFO - 2026-08-27 16:49:09 --> Output Class Initialized
+INFO - 2026-08-27 16:49:09 --> Security Class Initialized
+DEBUG - 2026-08-27 16:49:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2026-08-27 16:49:09 --> Input Class Initialized
+INFO - 2026-08-27 16:49:09 --> Language Class Initialized
+INFO - 2026-08-27 16:49:09 --> Loader Class Initialized
+INFO - 2026-08-27 16:49:09 --> Helper loaded: url_helper
+INFO - 2026-08-27 16:49:09 --> Helper loaded: html_helper
+INFO - 2026-08-27 16:49:09 --> Helper loaded: action_helper
+INFO - 2026-08-27 16:49:09 --> Helper loaded: security_helper
+INFO - 2026-08-27 16:49:09 --> Helper loaded: site_helper
+INFO - 2026-08-27 16:49:09 --> Helper loaded: file_helper
+INFO - 2026-08-27 16:49:09 --> Helper loaded: traffic_helper
+INFO - 2026-08-27 16:49:09 --> Controller Class Initialized
+DEBUG - 2026-08-27 16:49:09 --> Config file loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\config/iniconfig.php
+INFO - 2026-08-27 16:49:09 --> MY_Model class loaded
+INFO - 2026-08-27 16:49:09 --> Database Driver Class Initialized
+INFO - 2026-08-27 16:49:11 --> Model "Setting_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "usertype_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Loginlog_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Signin_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Permission_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Site_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Holiday_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Schoolyear_m" initialized
+INFO - 2026-08-27 16:49:11 --> Session: Class initialized using 'database' driver.
+INFO - 2026-08-27 16:49:11 --> Helper loaded: language_helper
+INFO - 2026-08-27 16:49:11 --> Helper loaded: date_helper
+INFO - 2026-08-27 16:49:11 --> Helper loaded: form_helper
+INFO - 2026-08-27 16:49:11 --> Form Validation Class Initialized
+INFO - 2026-08-27 16:49:11 --> Model "Classes_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Menu_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Notice_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "alert_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "conversation_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Event_m" initialized
+INFO - 2026-08-27 16:49:11 --> Language file loaded: language/english/topbar_menu_lang.php
+INFO - 2026-08-27 16:49:11 --> Model "systemadmin_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Dashboard_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Automation_shudulu_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Automation_rec_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "User_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "student_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Teacher_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Parents_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Sattendance_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Tattendance_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Subjectattendance_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Eattendance_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Subject_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "feetypes_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Invoice_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Expense_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Payment_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Lmember_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Book_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Issue_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "student_info_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Hmember_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Tmember_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "visitorinfo_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Income_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Make_payment_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Maininvoice_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Studentrelation_m" initialized
+INFO - 2026-08-27 16:49:11 --> Model "Conference_m" initialized
+INFO - 2026-08-27 16:49:11 --> Language file loaded: language/english/dashboard_lang.php
+INFO - 2026-08-27 16:49:11 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_header.php
+INFO - 2026-08-27 16:49:11 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_topbar.php
+INFO - 2026-08-27 16:49:11 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_menu.php
+ERROR - 2026-08-27 16:49:11 --> Could not find the language line "menu_students"
+ERROR - 2026-08-27 16:49:11 --> Could not find the language line "menu_teachers"
+ERROR - 2026-08-27 16:49:11 --> Could not find the language line "menu_users"
+INFO - 2026-08-27 16:49:11 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/ProfileBox.php
+INFO - 2026-08-27 16:49:11 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/NoticeBoard.php
+INFO - 2026-08-27 16:49:11 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/TeacherAttendance.php
+INFO - 2026-08-27 16:49:11 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/AttendanceHighChartJavascript.php
+INFO - 2026-08-27 16:49:11 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/EarningHighChartJavascript.php
+INFO - 2026-08-27 16:49:11 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/CalenderJavascript.php
+INFO - 2026-08-27 16:49:11 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/VisitorHighChartJavascript.php
+INFO - 2026-08-27 16:49:11 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\dashboard/index.php
+INFO - 2026-08-27 16:49:11 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\components/page_footer.php
+INFO - 2026-08-27 16:49:11 --> File loaded: E:\xampp\htdocs\ASTProjects\mainasteimsapp\mvc\views\_layout_main.php
+INFO - 2026-08-27 16:49:11 --> Final output sent to browser
+DEBUG - 2026-08-27 16:49:11 --> Total execution time: 2.4194

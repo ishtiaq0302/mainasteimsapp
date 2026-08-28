@@ -41,6 +41,9 @@ dependencies:
   path_provider: ^2.1.6
   printing: ^5.14.3
   web: ^1.1.1
+  intl: ^0.19.0
+  file_picker: ^8.1.2
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:

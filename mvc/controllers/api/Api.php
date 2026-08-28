@@ -80,11 +80,18 @@ class Api extends REST_Controller
         $schoolyearID = $this->post('schoolyearID') ?: 1;
         $campusID = $this->post('campusID') ?: 0;
         $classesID = $this->post('classesID') ?: 0;
+        $adminID = (int)($this->post('adminID') ?: 1);
 
         $this->db->select('sr.*, s.photo, s.email, s.phone, s.active');
         $this->db->from('studentrelation sr');
         $this->db->join('student s', 's.studentID = sr.srstudentID');
         $this->db->where('sr.srschoolyearID', $schoolyearID);
+        if ($adminID > 0) {
+            $this->db->group_start()
+                ->where('sr.adminID', $adminID)
+                ->or_where('sr.adminID', 0)
+                ->group_end();
+        }
 
         if ($campusID > 0) $this->db->where('sr.srcampusID', $campusID);
         if ($classesID > 0) $this->db->where('sr.srclassesID', $classesID);
@@ -119,78 +126,128 @@ class Api extends REST_Controller
 
     public function student_add_post()
     {
-        $name = $this->post('name');
-        $username = $this->post('username');
-        $password = $this->post('password');
-        $campusID = (int)$this->post('campusID');
-        $encryption_key = config_item('encryption_key');
+        try {
+            $name           = trim((string)$this->post('name'));
+            $username       = trim((string)$this->post('username'));
+            $password       = trim((string)$this->post('password'));
+            $campusID       = (int)$this->post('campusID');
+            $classesID      = (int)$this->post('classesID');
+            $sectionID      = (int)$this->post('sectionID');
+            $parentID       = (int)($this->post('parentID') ?: 0);
+            $schoolyearID   = (int)($this->post('schoolyearID') ?: 1);
+            $studentgroupID = (int)($this->post('studentgroupID') ?: 0);
+            $adminID        = (int)($this->post('adminID') ?: 1);
+            $roll           = trim((string)$this->post('roll'));
+            $dobRaw         = trim((string)$this->post('dob'));
 
-        if (!empty($name) && !empty($username) && !empty($password)) {
+            if (empty($name) || empty($username) || empty($password)) {
+                $this->_response(["status" => false, "message" => "Name, username, and password are required"], REST_Controller::HTTP_OK);
+                return;
+            }
+
+            if ($campusID <= 0 || $classesID <= 0 || $sectionID <= 0) {
+                $this->_response(["status" => false, "message" => "Campus, class, and section are required"], REST_Controller::HTTP_OK);
+                return;
+            }
+
+            // Check duplicate username across student table
+            $userExists = $this->db->where('username', $username)->get('student')->row();
+            if ($userExists) {
+                $this->_response(["status" => false, "message" => "Username '$username' is already taken"], REST_Controller::HTTP_OK);
+                return;
+            }
+
+            // Valid date of birth
+            $dob = (!empty($dobRaw) && strtotime($dobRaw) !== false) ? date('Y-m-d', strtotime($dobRaw)) : date('Y-m-d');
+
+            // Auto registration number
+            $registerNO = 1;
+            try {
+                $setting = $this->db->get_where('settings', ['campusID' => $campusID])->row();
+                if (!$setting) $setting = $this->db->get_where('settings', ['campusID' => 1])->row();
+                if ($setting && isset($setting->s_registration_no_auto)) {
+                    $registerNO = (int)$setting->s_registration_no_auto + 1;
+                }
+            } catch (Throwable $e) {
+                $registerNO = rand(1000, 9999);
+            }
+
+            $encryption_key = config_item('encryption_key');
+            $pass_hash      = hash("sha512", $password . $encryption_key);
+
+            $createUserID = (int)($this->post('create_userID') ?? 0);
+            if ($createUserID <= 0) {
+                $createUserID = $adminID > 0 ? $adminID : 1;
+            }
+
             $this->db->trans_start();
 
-            $setting = $this->db->get_where('settings', ['campusID' => $campusID])->row();
-            if (!$setting) $setting = $this->db->get_where('settings', ['campusID' => 1])->row();
-            $registerNO = ($setting ? (int)$setting->s_registration_no_auto : 0) + 1;
-
-            $pass_hash = hash("sha512", $password . $encryption_key);
             $student_data = [
-                'name' => $name,
-                'dob' => $this->post('dob'),
-                'sex' => $this->post('sex'),
-                'religion' => $this->post('religion'),
-                'email' => $this->post('email'),
-                'phone' => $this->post('phone'),
-                'address' => $this->post('address'),
-                'campusID' => $campusID,
-                'adminID' => $this->post('adminID') ?: 1,
-                'classesID' => $this->post('classesID'),
-                'sectionID' => $this->post('sectionID'),
-                'roll' => $this->post('roll'),
-                'registerNO' => $registerNO,
-                'username' => $username,
-                'password' => $pass_hash,
-                'usertypeID' => 3,
-                'parentID' => $this->post('parentID'),
-                'active' => 1,
+                'name'        => $name,
+                'dob'         => $dob,
+                'sex'         => trim((string)$this->post('sex')),
+                'religion'    => trim((string)$this->post('religion')),
+                'email'       => trim((string)$this->post('email')),
+                'phone'       => trim((string)$this->post('phone')),
+                'address'     => trim((string)$this->post('address')),
+                'campusID'    => $campusID,
+                'adminID'     => $adminID > 0 ? $adminID : 1,
+                'classesID'   => $classesID,
+                'sectionID'   => $sectionID,
+                'roll'        => $roll,
+                'registerNO'  => $registerNO,
+                'username'    => $username,
+                'password'    => $pass_hash,
+                'usertypeID'  => 3,
+                'parentID'    => $parentID,
+                'active'      => 1,
                 'create_date' => date('Y-m-d H:i:s'),
-                'modify_date' => date('Y-m-d H:i:s')
+                'modify_date' => date('Y-m-d H:i:s'),
+                'create_userID'   => $createUserID,
+                'create_username' => trim((string)($this->post('create_username') ?? 'admin')),
+                'create_usertype' => trim((string)($this->post('create_usertype') ?? 'Admin'))
             ];
             $this->db->insert('student', $student_data);
             $studentID = $this->db->insert_id();
 
-            $this->db->set('s_registration_no_auto', 's_registration_no_auto + 1', FALSE);
-            $this->db->where('campusID', $campusID);
-            $this->db->update('settings');
+            try {
+                $this->db->set('s_registration_no_auto', 's_registration_no_auto + 1', FALSE);
+                $this->db->where('campusID', $campusID);
+                $this->db->update('settings');
+            } catch (Throwable $e) {}
 
             $rel_data = [
-                'srstudentID' => $studentID,
-                'srname' => $name,
-                'srcampusID' => $campusID,
-                'srclassesID' => $this->post('classesID'),
-                'srsectionID' => $this->post('sectionID'),
-                'srroll' => $this->post('roll'),
-                'srregisterNO' => $registerNO,
-                'srschoolyearID' => $this->post('schoolyearID'),
-                'srstudentgroupID' => $this->post('studentgroupID')
+                'srstudentID'      => $studentID,
+                'srname'           => $name,
+                'srcampusID'       => $campusID,
+                'srclassesID'      => $classesID,
+                'srsectionID'      => $sectionID,
+                'srroll'           => $roll,
+                'srregisterNO'     => $registerNO,
+                'srschoolyearID'   => $schoolyearID,
+                'srstudentgroupID' => $studentgroupID,
+                'adminID'          => $adminID > 0 ? $adminID : 1,
             ];
             $this->db->insert('studentrelation', $rel_data);
 
             $ext_data = [
-                'studentID' => $studentID,
-                'studentgroupID' => $this->post('studentgroupID'),
-                'remarks' => $this->post('remarks')
+                'studentID'      => $studentID,
+                'studentgroupID' => $studentgroupID,
+                'remarks'        => trim((string)$this->post('remarks'))
             ];
             $this->db->insert('studentextend', $ext_data);
 
             $this->db->trans_complete();
 
             if ($this->db->trans_status() === FALSE) {
-                $this->_response(["status" => false, "message" => "Database error"], REST_Controller::HTTP_OK);
+                $dbError = $this->db->error();
+                $msg = !empty($dbError['message']) ? $dbError['message'] : "Database error adding student";
+                $this->_response(["status" => false, "message" => $msg], REST_Controller::HTTP_OK);
             } else {
                 $this->_response(["status" => true, "message" => "Student added successfully", "studentID" => $studentID]);
             }
-        } else {
-            $this->_response(["status" => false, "message" => "Required fields missing"], REST_Controller::HTTP_OK);
+        } catch (Throwable $e) {
+            $this->_response(["status" => false, "message" => "Server error: " . $e->getMessage()], REST_Controller::HTTP_OK);
         }
     }
 
@@ -246,17 +303,48 @@ class Api extends REST_Controller
         $schoolyearID = (int)$this->post('schoolyearID') ?: 1;
 
         if ($studentID > 0) {
-            $this->db->select('s.*, sr.*, se.*, p.name as parent_name, p.phone as parent_phone');
+            $this->db->select('s.*, sr.*, se.*, 
+                c.classes as class_name, 
+                sec.section as section_name, 
+                cam.name as campus_name, 
+                sg.group as group_name,
+                p.name as parent_name, p.father_name, p.father_profession, p.mother_name, p.mother_profession, p.email as parent_email, p.phone as parent_phone, p.address as parent_address, p.username as parent_username');
             $this->db->from('student s');
             $this->db->join('studentrelation sr', 'sr.srstudentID = s.studentID AND sr.srschoolyearID = '.$schoolyearID, 'left');
             $this->db->join('studentextend se', 'se.studentID = s.studentID', 'left');
             $this->db->join('parents p', 'p.parentsID = s.parentID', 'left');
+            $this->db->join('classes c', 'c.classesID = sr.srclassesID', 'left');
+            $this->db->join('section sec', 'sec.sectionID = sr.srsectionID', 'left');
+            $this->db->join('campus cam', 'cam.campusID = sr.srcampusID', 'left');
+            $this->db->join('studentgroup sg', 'sg.studentgroupID = sr.srstudentgroupID', 'left');
             $this->db->where('s.studentID', $studentID);
             $student = $this->db->get()->row_array();
 
             if ($student) {
                 unset($student['password']);
-                $this->_response(["status" => true, "data" => $student]);
+
+                $routines = [];
+                if (!empty($student['srclassesID']) && !empty($student['srsectionID'])) {
+                    $this->db->select('r.*, sub.subject, t.name as teacher_name');
+                    $this->db->from('routine r');
+                    $this->db->join('subject sub', 'sub.subjectID = r.subjectID', 'left');
+                    $this->db->join('teacher t', 't.teacherID = r.teacherID', 'left');
+                    $this->db->where('r.classesID', $student['srclassesID']);
+                    $this->db->where('r.sectionID', $student['srsectionID']);
+                    $this->db->where('r.schoolyearID', $schoolyearID);
+                    $routines = $this->db->get()->result_array();
+                }
+
+                $documents = $this->db->get_where('document', ['usertypeID' => 3, 'userID' => $studentID])->result_array();
+
+                $this->_response([
+                    "status" => true,
+                    "data" => array_merge($student, [
+                        'profile' => $student,
+                        'routines' => $routines,
+                        'documents' => $documents
+                    ])
+                ]);
             } else {
                 $this->_response(["status" => false, "message" => "Student not found"], REST_Controller::HTTP_OK);
             }
@@ -286,6 +374,8 @@ class Api extends REST_Controller
             $stats['events'] = $this->db->where('schoolyearID', $schoolyearID)->where($campusFilter)->count_all_results('event');
             $stats['holidays'] = $this->db->where('schoolyearID', $schoolyearID)->where($campusFilter)->count_all_results('holiday');
             $stats['invoices'] = $this->db->where(['maininvoiceschoolyearID' => $schoolyearID, 'maininvoicedeleted_at' => 1])->count_all_results('maininvoice');
+            $stats['campuses'] = $this->db->count_all_results('campus');
+            $stats['routines'] = $this->db->where($campusFilter)->count_all_results('routine');
 
             $this->_response(["status" => true, "data" => $stats]);
         } else {
@@ -328,52 +418,86 @@ class Api extends REST_Controller
 
     public function student_update_post()
     {
-        $studentID = (int)$this->post('studentID');
-        $name = $this->post('name');
-        $schoolyearID = (int)$this->post('schoolyearID');
+        try {
+            $studentID      = (int)$this->post('studentID');
+            $name           = trim((string)$this->post('name'));
+            $schoolyearID   = (int)($this->post('schoolyearID') ?: 1);
+            $campusID       = (int)($this->post('campusID') ?: 0);
+            $classesID      = (int)$this->post('classesID');
+            $sectionID      = (int)$this->post('sectionID');
+            $parentID       = (int)($this->post('parentID') ?: 0);
+            $adminID        = (int)($this->post('adminID') ?: 1);
+            $studentgroupID = (int)($this->post('studentgroupID') ?: 0);
+            $roll           = trim((string)$this->post('roll'));
+            $dobRaw         = trim((string)$this->post('dob'));
 
-        if (!empty($studentID) && !empty($name)) {
+            if ($studentID <= 0 || empty($name)) {
+                $this->_response(["status" => false, "message" => "Valid student ID and name are required"], REST_Controller::HTTP_OK);
+                return;
+            }
+
+            $dob = (!empty($dobRaw) && strtotime($dobRaw) !== false) ? date('Y-m-d', strtotime($dobRaw)) : date('Y-m-d');
+
+            $createUserID = (int)($this->post('create_userID') ?? 0);
+            if ($createUserID <= 0) {
+                $createUserID = $adminID > 0 ? $adminID : 1;
+            }
+
             $this->db->trans_start();
 
             $student_data = [
-                'name' => $name,
-                'dob' => $this->post('dob'),
-                'sex' => $this->post('sex'),
-                'religion' => $this->post('religion'),
-                'email' => $this->post('email'),
-                'phone' => $this->post('phone'),
-                'address' => $this->post('address'),
-                'classesID' => $this->post('classesID'),
-                'sectionID' => $this->post('sectionID'),
-                'roll' => $this->post('roll'),
-                'parentID' => $this->post('parentID'),
-                'modify_date' => date('Y-m-d H:i:s')
+                'name'        => $name,
+                'dob'         => $dob,
+                'sex'         => trim((string)$this->post('sex')),
+                'religion'    => trim((string)$this->post('religion')),
+                'email'       => trim((string)$this->post('email')),
+                'phone'       => trim((string)$this->post('phone')),
+                'address'     => trim((string)$this->post('address')),
+                'classesID'   => $classesID,
+                'sectionID'   => $sectionID,
+                'roll'        => $roll,
+                'parentID'    => $parentID,
+                'adminID'     => $adminID > 0 ? $adminID : 1,
+                'modify_date' => date('Y-m-d H:i:s'),
+                'create_userID'   => $createUserID,
+                'create_username' => trim((string)($this->post('create_username') ?? 'admin')),
+                'create_usertype' => trim((string)($this->post('create_usertype') ?? 'Admin'))
             ];
+            if ($campusID > 0) {
+                $student_data['campusID'] = $campusID;
+            }
+
             $this->db->update('student', $student_data, ['studentID' => $studentID]);
 
             $rel_data = [
-                'srname' => $name,
-                'srclassesID' => $this->post('classesID'),
-                'srsectionID' => $this->post('sectionID'),
-                'srroll' => $this->post('roll')
+                'srname'      => $name,
+                'srclassesID' => $classesID,
+                'srsectionID' => $sectionID,
+                'srroll'      => $roll,
+                'adminID'     => $adminID > 0 ? $adminID : 1,
             ];
+            if ($campusID > 0) {
+                $rel_data['srcampusID'] = $campusID;
+            }
             $this->db->update('studentrelation', $rel_data, ['srstudentID' => $studentID, 'srschoolyearID' => $schoolyearID]);
 
             $ext_data = [
-                'studentgroupID' => $this->post('studentgroupID'),
-                'remarks' => $this->post('remarks')
+                'studentgroupID' => $studentgroupID,
+                'remarks'        => trim((string)$this->post('remarks'))
             ];
             $this->db->update('studentextend', $ext_data, ['studentID' => $studentID]);
 
             $this->db->trans_complete();
 
             if ($this->db->trans_status() === FALSE) {
-                $this->_response(["status" => false, "message" => "Update failed"], REST_Controller::HTTP_OK);
+                $dbError = $this->db->error();
+                $msg = !empty($dbError['message']) ? $dbError['message'] : "Update failed";
+                $this->_response(["status" => false, "message" => $msg], REST_Controller::HTTP_OK);
             } else {
                 $this->_response(["status" => true, "message" => "Student updated successfully"]);
             }
-        } else {
-            $this->_response(["status" => false, "message" => "Required fields missing"], REST_Controller::HTTP_OK);
+        } catch (Throwable $e) {
+            $this->_response(["status" => false, "message" => "Server error: " . $e->getMessage()], REST_Controller::HTTP_OK);
         }
     }
 }
